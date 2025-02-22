@@ -1,0 +1,13 @@
+Lab03/
+Lab03.xcodeproj/
+packages/
+x64/
+Lab03.sln
+Lab03.vcxproj
+Lab03.vcxproj.filters
+Lab03.vcxproj.user
+
+# ignore files for linux compilation
+obj/
+chess
+makefile
