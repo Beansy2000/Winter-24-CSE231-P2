@@ -19,6 +19,7 @@
 #include "velocity.h"
 #include "acceleration.h"
 #include "stars.h"
+#include "physics.h"
 #include "test.h"
 using namespace std;
 
@@ -51,11 +52,10 @@ public:
       // ptGPS.setPixelsY(ptUpperRight.getPixelsY() * random(-0.5, 0.5));
       
 		stars.resetStars(ptUpperRight.getPixelsX(), ptUpperRight.getPixelsY());
+      velSputnik.set(Angle(270.0, false), 310000.0);
 
 
-      angleShip = 0.0;
       angleEarth = 0.0;
-      phaseStar = 100;
    }
 
    Position ptHubble;
@@ -67,10 +67,12 @@ public:
    Position ptStar;
    Position ptUpperRight;
    Stars stars;
+	Velocity velSputnik;
+	Acceleration accSputnik;
+   Acceleration gravity;
+	Physics physics;
 
-   unsigned char phaseStar;
-
-   double angleShip;
+   Angle angleShip;
    double angleEarth;
 };
 
@@ -105,11 +107,28 @@ void callBack(const Interface* pUI, void* p)
    //
    // perform all the game logic
    //
+   double t = 0.58;
+
+	// Apply acceleration to velocity
+	double sputnikX = pDemo->ptSputnik.getMetersX();
+	double sputnikY = pDemo->ptSputnik.getMetersY();
+   pDemo->angleShip.setRadians(pDemo->physics.getGravDirectionRadians(sputnikX, sputnikY));
+	//cout << "X: " << sputnikX << " Y: " << sputnikY << endl;
+   pDemo->gravity.set(pDemo->angleShip, pDemo->physics.getAccelFromGravity(sputnikX, sputnikY) * 9800);
+	//cout << "Angle: " << pDemo->physics.getGravDirectionRadians(sputnikX, sputnikY) << " DDX: " << pDemo->gravity.getDDX() << " DDY: " << pDemo->gravity.getDDY() << endl;
+   pDemo->accSputnik.setDDX(pDemo->gravity.getDDX());
+   pDemo->accSputnik.setDDY(pDemo->gravity.getDDY());
+	pDemo->velSputnik.add(pDemo->accSputnik, t);
+	//cout << pDemo->velSputnik.getDX() << " " << pDemo->velSputnik.getDY() << endl;
+
+	// Apply velocity to position
+	
+	pDemo->ptSputnik.add(pDemo->accSputnik, pDemo->velSputnik, t);
 
    // rotate the earth
-   pDemo->angleEarth += 0.01;
-   pDemo->angleShip += 0.01;
-   pDemo->phaseStar++;
+   //pDemo->angleEarth -= 0.01; // way too fast
+   //pDemo->angleEarth -= 0.003490658504; // orginal calculation, too slow
+   pDemo->angleEarth -= 0.0040469023027; // noice
 
    //
    // draw everything
@@ -121,7 +140,7 @@ void callBack(const Interface* pUI, void* p)
    // draw satellites
    // gout.drawCrewDragon(pDemo->ptCrewDragon, pDemo->angleShip);
    // gout.drawHubble    (pDemo->ptHubble,     pDemo->angleShip);
-   gout.drawSputnik   (pDemo->ptSputnik,    pDemo->angleShip);
+   gout.drawSputnik   (pDemo->ptSputnik,    pDemo->angleShip.getRadians());
    // gout.drawStarlink  (pDemo->ptStarlink,   pDemo->angleShip);
    // gout.drawShip      (pDemo->ptShip,       pDemo->angleShip, pUI->isSpace());
    // gout.drawGPS       (pDemo->ptGPS,        pDemo->angleShip);
@@ -150,7 +169,6 @@ void callBack(const Interface* pUI, void* p)
 
    // draw all the stars
    pDemo->stars.draw(gout);
-
 
    // draw the earth
    pt.setMeters(0.0, 0.0);

@@ -13,6 +13,8 @@
 
 #include <iostream> 
 #include <cmath>
+#include "acceleration.h"
+#include "velocity.h"
 
 class TestPosition;
 class Acceleration;
@@ -70,6 +72,8 @@ public:
    {
       return rhs.getMetersX() != x || rhs.getMetersY() != y;
    }
+
+   void add(const Acceleration& a, const Velocity& v, double t);
 
 private:
    double x;                 // horizontal position

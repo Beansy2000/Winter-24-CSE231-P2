@@ -19,9 +19,14 @@ class Angle
 {
 public:
    // Constructors
-   Angle() : radians(0.0) {}                        // Default Constructor
+   Angle() : radians(0.0) {}                                        // Default Constructor
    Angle(const Angle& rhs) : radians(rhs.radians) {}                // Copy Constructor
-   Angle(double degrees) : radians(convertToRadians(degrees)) {}  // Non-default Constructor
+   Angle(double degrees, bool isRadians) : radians(0.0) {           // Non-default Constructor
+      setRadians(convertToRadians(degrees));
+      if (isRadians) {
+         setRadians(degrees);
+      }
+   } 
 
    // Getters
    double getDegrees() const
