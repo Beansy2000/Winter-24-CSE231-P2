@@ -25,40 +25,19 @@ public:
    Velocity(double dx, double dy) : dx(dx), dy(dy) { }
 
    // getters
-   double getDX() const 
-   {
-      return dx;
-   }
-
-   double getDY() const 
-   {
-      return dy;
-   }
+   double getDX() const { return dx; }
+   double getDY() const { return dy; }
 
    double getSpeed() const;
 
    // setters
-   void setDX(double dx) 
-   {
-      this->dx = dx;
-   }
-
-   void setDY(double dy) 
-   {
-      this->dy = dy;
-   }
+   void setDX(double dx) { this->dx = dx; }
+   void setDY(double dy) { this->dy = dy; }
 
    void set(const Angle& angle, double magnitude);
 
-   void addDX(double dx) 
-   {
-      this->dx += dx;
-   }
-
-   void addDY(double dy) 
-   {
-      this->dy += dy;
-   }
+   void addDX(double dx) { this->dx += dx; }
+   void addDY(double dy) { this->dy += dy; }
 
    void add(const Acceleration& acceleration, double time);
 

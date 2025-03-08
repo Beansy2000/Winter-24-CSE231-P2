@@ -26,39 +26,18 @@ public:
    Acceleration(double ddx, double ddy) : ddx(ddx), ddy(ddy) {}
 
    // Getters
-   double getDDX() const
-   {
-      return ddx;
-   }
-
-   double getDDY() const
-   {
-      return ddy;
-   }
+   double getDDX() const   { return ddx; }
+   double getDDY() const   { return ddy; }
 
    // Setters
-   void setDDX(double ddx)
-   {
-      this->ddx = ddx;
-   }
-
-   void setDDY(double ddy)
-   {
-      this->ddy = ddy;
-   }
+   void setDDX(double ddx) { this->ddx = ddx; }
+   void setDDY(double ddy) { this->ddy = ddy; }
 
    void set(const Angle& a, double magnitude);
 
    // Add functions
-   void addDDX(double ddx)
-   {
-      this->ddx += ddx;
-   }
-
-   void addDDY(double ddy)
-   {
-      this->ddy += ddy;
-   }
+   void addDDX(double ddx) { this->ddx += ddx; }
+   void addDDY(double ddy) { this->ddy += ddy; }
 
    void add(const Acceleration& rhs);
 

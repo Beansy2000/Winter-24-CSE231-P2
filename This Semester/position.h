@@ -52,10 +52,7 @@ public:
    void addPixelsY(double dyPixels)      { setPixelsY(getPixelsY() + dyPixels);     }
 
    // deal with the ratio of meters to pixels
-   void setZoom(double metersFromPixels)
-   {
-      this->metersFromPixels = metersFromPixels;
-   }
+   void setZoom(double metersFromPixels) { this->metersFromPixels = metersFromPixels; }
    double getZoom() const { return metersFromPixels; }
 
    bool operator < (const Position& other) const

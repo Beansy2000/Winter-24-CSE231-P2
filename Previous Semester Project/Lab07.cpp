@@ -74,6 +74,7 @@ public:
    void draw(ogstream& pgout) {
        for (auto it = satellites.begin(); it != satellites.end(); ++it)
        {
+           std::cout << "abc";
            (*it)->draw(pgout);
        }
    }

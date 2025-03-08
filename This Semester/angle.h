@@ -29,100 +29,29 @@ public:
    } 
 
    // Getters
-   double getDegrees() const
-   {
-      return radians * (180 / M_PI);
-   }
+   double getDegrees() const { return radians * (180 / M_PI); }
+   double getRadians() const { return radians; }
 
-   double getRadians() const
-   {
-      return radians;
-   }
+   double getDx() const { return sin(radians); }
+   double getDy() const { return cos(radians); }
 
    // Setters
-   void setDegrees(double degrees)
-   {
-      this->radians = normalize(degrees * (M_PI / 180));
-   }
+   void setDegrees(double degrees) { this->radians = normalize(degrees * (M_PI / 180)); }
+   void setRadians(double radians) { this->radians = normalize(radians); }
 
-   void setRadians(double radians)
-   {
-      this->radians = normalize(radians);
-   }
+   void setUp() { this->radians = 0.0; }
+   void setDown() { this->radians = M_PI; }
+   void setRight() { this->radians = M_PI / 2; }
+   void setLeft() { this->radians = M_PI + M_PI / 2; }
 
-   void setUp()
-   {
-      this->radians = 0.0;
-   }
-
-   void setDown()
-   {
-      this->radians = M_PI;
-   }
-
-   void setRight()
-   {
-      this->radians = M_PI / 2;
-   }
-
-   void setLeft()
-   {
-      this->radians = M_PI + M_PI / 2;
-   }
-
-   /************************************
-   * Reverse
-   * Adjusts the angle by reversing its direction.
-   * Subtracts π radians (180 degrees) from the current angle
-   * and normalizes the result to ensure the angle is in the range (0, 2π).
-   ************************************/
-   void reverse()
-   {
-      this->radians = normalize(radians - M_PI);
-   }
-
-   /************************************
-   * Add
-   * Adds a given delta (in radians) to the current angle.
-   * After adding the delta, the result is normalized.
-   * Returns a reference to the updated Angle object.
-   ************************************/
-   Angle& add(double delta)
-   {
-      radians += delta;
-      radians = normalize(radians);
-      return *this;
-   };
+   void reverse();
+   Angle& add(double delta);
 
 private:
    double radians;
 
    double normalize(double rad) const;
 
-   /************************************
-   * Degrees to Radians
-   * Recieves some amount of degrees as a double.
-   * Multiplies it by pi / 180 to get radians and normalizes it.
-   * Returns the normalized radians.
-   ************************************/
-   double convertToRadians(double degrees) const
-   {
-      double rad;
-      rad = degrees * (M_PI / 180);
-      rad = normalize(rad);
-      return rad;
-   }
-
-   /************************************
-   * Radians to Degrees
-   * Recieves some amount of radians as a double.
-   * Normalizes the radians and multiplies them by 180 / pi to get degrees.
-   * Returns the normalized degrees.
-   ************************************/
-   double convertToDegrees(double rad) const
-   {
-      double degrees;
-      degrees = normalize(rad);
-      return degrees * (180 / M_PI);
-   }
+   double convertToRadians(double degrees) const;
+   double convertToDegrees(double rad) const;
 };
