@@ -33,6 +33,7 @@ public:
    // setters
    void setDX(double dx) { this->dx = dx; }
    void setDY(double dy) { this->dy = dy; }
+   void setDXY(double dx, double dy) { this->dx = dx; this->dy = dy; }
 
    void set(const Angle& angle, double magnitude);
 
