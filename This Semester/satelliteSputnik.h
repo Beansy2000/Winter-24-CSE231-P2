@@ -19,7 +19,8 @@ class Sputnik : public Satellite {
 public:
 	Sputnik() : Satellite() {
 		position.setMeters(-36515095.13, 21082000.0);
-		velocity.setDXY(2050, 2684);
+		velocity.setDX(2050);
+		velocity.setDY(2684);
 		radius = 4.0 * position.getZoom();
 		angularVelocity = 1;
 	}
@@ -29,4 +30,5 @@ public:
 	void destroy(Satellite& satellite) {
 
 	}
+	void move(float time) override;
 };
