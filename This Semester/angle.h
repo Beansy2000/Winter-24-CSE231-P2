@@ -44,6 +44,8 @@ public:
    void setRight() { this->radians = M_PI / 2; }
    void setLeft() { this->radians = M_PI + M_PI / 2; }
 
+   void setDXY(double dx, double dy) { this->radians = normalize(atan2(dx, dy)); }
+
    void reverse();
    Angle& add(double delta);
 

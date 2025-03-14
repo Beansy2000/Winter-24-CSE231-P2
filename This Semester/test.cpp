@@ -9,6 +9,11 @@
 
 #include "test.h"
 #include "testPosition.h"
+#include "testAcceleration.h"
+#include "testAngle.h"
+#include "testVelocity.h"
+#include "testSatellite.h"
+#include "testSputnik.h"
 
 #ifdef _WIN32
 #include <windows.h>
@@ -30,4 +35,9 @@ void testRunner()
 #endif // _WIN32
 
    TestPosition().run();
+   TestAcceleration().run();
+   TestAngle().run();
+   TestVelocity().run();
+   TestSatellite().run();
+   TestSputnik().run();
 }

@@ -40,7 +40,8 @@ public:
    void addDX(double dx) { this->dx += dx; }
    void addDY(double dy) { this->dy += dy; }
 
-   void add(const Acceleration& acceleration, double time);
+   virtual void add(const Acceleration& acceleration, double time);
+   virtual void add(const Velocity& v);
 
 private:
    double dx;           // horizontal velocity

@@ -22,6 +22,12 @@ void Velocity::add(const Acceleration& acceleration, double time)
    this->dx = dx + (acceleration.getDDX() * time);
    this->dy = dy + (acceleration.getDDY() * time);
 }
+void Velocity::add(const Velocity& v)
+{
+	this->dx = dx + v.getDX();
+	this->dy = dy + v.getDY();
+}
+
 
 
 /*********************************************

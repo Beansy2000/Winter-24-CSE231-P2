@@ -83,7 +83,8 @@ void callBack(const Interface* pUI, void* p)
    // the first step is to cast the void pointer into a game object. This
    // is the first step of every single callback function in OpenGL. 
    Demo* pDemo = (Demo*)p;
-   double t = 0.58;
+   double td = 24 * 60;
+   double tpf = td / 30;
 
    //
    // accept input
@@ -98,8 +99,8 @@ void callBack(const Interface* pUI, void* p)
       pDemo->ptShip.addPixelsX(1.0);*/
 
    // move by a little
-   pDemo->ptEarth.rotate();
-   pDemo->ptSputnik.move(6);
+   pDemo->ptEarth.rotate(td);
+   pDemo->ptSputnik.move(tpf);
 
    //
    // perform all the game logic

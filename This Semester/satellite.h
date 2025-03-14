@@ -29,13 +29,13 @@ protected:
 	Position position;
 	Physics physics;
 	Angle angle;
-	double angularVelocity;
-	bool dead;
-	double radius;
+	double angularVelocity = 0;
+	bool dead = true;
+	double radius = 0;
 
 public:
 	// Default constructor
-	Satellite(double radius = 0.0, double angularVelocity = 0.0) : angularVelocity(angularVelocity), dead(false), radius(radius) {}
+	Satellite(double radius = 0.0, double angularVelocity = 0.0) : angularVelocity(angularVelocity), dead(true), radius(radius) {}
 	
 	// VARIABLES
 	// Get protected variables

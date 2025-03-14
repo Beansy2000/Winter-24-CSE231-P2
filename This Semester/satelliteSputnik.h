@@ -22,7 +22,8 @@ public:
 		velocity.setDX(2050);
 		velocity.setDY(2684);
 		radius = 4.0 * position.getZoom();
-		angularVelocity = 1;
+		angularVelocity = .001;
+		dead = false;
 	}
 	void draw(ogstream& pgout) {
 		pgout.drawSputnik(position, angle.getRadians());

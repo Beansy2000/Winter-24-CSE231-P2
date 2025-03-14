@@ -34,7 +34,7 @@ public:
 	void draw(ogstream& pgout) {
 		pgout.drawEarth(position, angle.getRadians());
 	}
-	void rotate() {
-		angle.setRadians(angle.getRadians() - 0.0040469023027);
+	void rotate(double td) {
+		angle.setRadians(angle.getRadians() + -(2 * M_PI / 30) * (td / 86400));
 	}
 };
