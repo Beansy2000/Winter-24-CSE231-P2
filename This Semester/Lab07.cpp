@@ -23,6 +23,7 @@
 #include "test.h"
 #include "satellite.h"
 #include "satelliteSputnik.h"
+#include "satelliteHubble.h"
 #include "earth.h"
 using namespace std;
 
@@ -58,6 +59,7 @@ public:
    Earth ptEarth;
    //Hubble ptHubble;
    Sputnik ptSputnik;
+   Hubble ptHubble;
    //Starlink ptStarlink;
    //CrewDragon ptCrewDragon;
    //Ship ptShip;
@@ -101,6 +103,7 @@ void callBack(const Interface* pUI, void* p)
    // move by a little
    pDemo->ptEarth.rotate(td);
    pDemo->ptSputnik.move(tpf);
+   pDemo->ptHubble.move(tpf);
 
    //
    // perform all the game logic
@@ -139,6 +142,7 @@ void callBack(const Interface* pUI, void* p)
    // gout.drawHubble    (pDemo->ptHubble,     pDemo->angleShip);
    // gout.drawSputnik   (pDemo->ptSputnik.getPosition(), pDemo->ptSputnik.getAngle());
    pDemo->ptSputnik.draw(gout);
+   pDemo->ptHubble.draw(gout);
    // gout.drawStarlink  (pDemo->ptStarlink,   pDemo->angleShip);
    // gout.drawShip      (pDemo->ptShip,       pDemo->angleShip, pUI->isSpace());
    // gout.drawGPS       (pDemo->ptGPS,        pDemo->angleShip);
