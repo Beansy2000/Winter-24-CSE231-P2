@@ -55,11 +55,11 @@ public:
 
 	// Setters
 	void setMetersX(double metersX) { position.setMetersX(metersX); }
-	void setMetersY(double metersY) { position.setMetersX(metersY); }
+	void setMetersY(double metersY) { position.setMetersY(metersY); }
 	void setMeters(double mX, double mY) { position.setMeters(mX, mY); }
 	void setDX(double dX) { velocity.setDX(dX); }
 	void setDY(double dY) { velocity.setDY(dY); }
-	void setAngle(float radians) { angle.setRadians(radius); }
+	void setAngle(float radians) { angle.setRadians(radians); }
 	void kill() { dead = true; }
 
 	// METHODS
