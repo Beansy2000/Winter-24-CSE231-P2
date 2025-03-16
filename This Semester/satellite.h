@@ -19,7 +19,7 @@
 
 
 enum SatelliteType {
-	GPS, HUBBLE, STARLINK, SPUTNIK, CREWDRAGON, PART, FRAGMENT
+	sGPS, HUBBLE, STARLINK, SPUTNIK, CREWDRAGON, PART, FRAGMENT
 };
 
 class Satellite {
@@ -65,5 +65,5 @@ public:
 	// METHODS
 	virtual void draw(ogstream& gout) {}
 	virtual void destroy(Satellite& satellite) {}
-	virtual void move(float time);
+	void move(float time);
 };

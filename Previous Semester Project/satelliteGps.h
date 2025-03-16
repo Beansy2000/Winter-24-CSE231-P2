@@ -30,8 +30,8 @@ class Gps : public Satellite
                 velocity.setDY(3360.18);
                 break;
             case 3:
-                pos.setMeters(23001634.72, -13280000.0);
-                velocity.setDX(1940.0);
+                pos.setMeters(23001634.72, 13280000.0);
+                velocity.setDX(-1940.0);
                 velocity.setDY(3360.18);
                 break;
             case 4:

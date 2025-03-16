@@ -32,15 +32,16 @@ const double EARTH_RADIUS = 6378000.0;
 	}
 
 	double Physics::getGravDirectionRadians(double x, double y) {
-		if (y > 0 && x < 0) // Top Left Quadrant
-			return abs(atan2(-y, -x)) + 1.57079632;
-		else if (y < 0 && x < 0) // Bottom Left Quadrant
-			return 1.57079632 - atan2(-y, -x);
-		else if (y < 0 && x > 0) // Bottom Right Quadrant
-			return -atan2(-y, -x) + 1.57079632;
-		else if (y > 0 && x > 0) // Top Right Quadrant
-			return abs(atan2(-y, -x)) + 1.57079632;
-		return 3.14159;
+		//if (y > 0 && x < 0) // Top Left Quadrant
+		//	return abs(atan2(-y, -x)) + 1.57079632;
+		//else if (y < 0 && x < 0) // Bottom Left Quadrant
+		//	return 1.57079632 - atan2(-y, -x);
+		//else if (y < 0 && x > 0) // Bottom Right Quadrant
+		//	return -atan2(-y, -x) + 1.57079632;
+		//else if (y > 0 && x > 0) // Top Right Quadrant
+		//	return abs(atan2(-y, -x)) + 1.57079632;
+		//return 3.14159;
+		return atan2(-y, -x);
 	}
 
 	double Physics::getDDX(double acceleration, double radians) {

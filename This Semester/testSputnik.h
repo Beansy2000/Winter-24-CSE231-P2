@@ -1,6 +1,6 @@
 /***********************************************************************
  * Test File:
- *    Satellite
+ *    SPUTNIK
  * Author:
  *    Tyler Philips, Cesar Tavarez, and Boston Stamm
  * Summary:
@@ -14,14 +14,13 @@
 #include "velocity.h"
 
  /*********************************************
-  * TEST SATELLITE
-  * Unit tests for Acceleration
+  * TEST SPUTNIK
   *********************************************/
 class TestSputnik : public UnitTest {
 public:
 	void run() {
 		defaultConstructor();
-		report("Satellite");
+		report("Sputnik");
 	}
 private:
 	void defaultConstructor() {
@@ -32,12 +31,12 @@ private:
 
 		// Action
 		p.setMeters(-36515095.13, 21082000.0);
-		v.setDXY(2050, 2684);
+		v.setDXY(2050.0, 2684.68);
 
 		// TEST
 		assertUnit(s.getRadius() == 4.0 * s.getPosition().getZoom());
 		assertUnit(s.isDead() == false);
-		assertUnit(s.getAngularVelocity() == 1);
+		assertUnit(s.getAngularVelocity() == 0.03);
 		assertUnit(s.getPosition() == p);
 		assertUnit(s.getVelocity().getDX() == v.getDX());
 		assertUnit(s.getVelocity().getDY() == v.getDY());

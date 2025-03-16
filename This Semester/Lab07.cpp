@@ -24,7 +24,12 @@
 #include "satellite.h"
 #include "satelliteSputnik.h"
 #include "satelliteHubble.h"
+#include "satelliteCrewDragon.h"
+#include "satelliteGPS.h"
+#include "satelliteStarlink.h"
+#include "satelliteShip.h"
 #include "earth.h"
+#include "list"
 using namespace std;
 
 /*************************************************************************
@@ -57,13 +62,18 @@ public:
    }
 
    Earth ptEarth;
-   //Hubble ptHubble;
-   Sputnik ptSputnik;
    Hubble ptHubble;
-   //Starlink ptStarlink;
-   //CrewDragon ptCrewDragon;
-   //Ship ptShip;
-   //GPS ptGPS;
+   Sputnik ptSputnik;
+   Starlink ptStarlink;
+   CrewDragon ptCrewDragon;
+   Ship ptShip;
+   GPS ptGPS1 = GPS(1);
+   GPS ptGPS2 = GPS(2);
+   GPS ptGPS3 = GPS(3);
+   GPS ptGPS4 = GPS(4);
+   GPS ptGPS5 = GPS(5);
+   GPS ptGPS6 = GPS(6);
+   //list<GPS> GPSArray{GPS(1), GPS(2), GPS(3), GPS(4), GPS(5), GPS(6)};
    Position ptStar;
    Position ptUpperRight;
    Stars stars;
@@ -102,8 +112,20 @@ void callBack(const Interface* pUI, void* p)
 
    // move by a little
    pDemo->ptEarth.rotate(td);
-   pDemo->ptSputnik.move(tpf);
    pDemo->ptHubble.move(tpf);
+   pDemo->ptSputnik.move(tpf);
+   pDemo->ptStarlink.move(tpf);
+   pDemo->ptCrewDragon.move(tpf);
+   pDemo->ptShip.move(tpf);
+   pDemo->ptGPS1.move(tpf);
+   pDemo->ptGPS2.move(tpf);
+   pDemo->ptGPS3.move(tpf);
+   pDemo->ptGPS4.move(tpf);
+   pDemo->ptGPS5.move(tpf);
+   pDemo->ptGPS6.move(tpf);
+   /*for (auto gps : pDemo->GPSArray) {
+       gps.move(tpf);
+   }*/
 
    //
    // perform all the game logic
@@ -141,8 +163,21 @@ void callBack(const Interface* pUI, void* p)
    // gout.drawCrewDragon(pDemo->ptCrewDragon, pDemo->angleShip);
    // gout.drawHubble    (pDemo->ptHubble,     pDemo->angleShip);
    // gout.drawSputnik   (pDemo->ptSputnik.getPosition(), pDemo->ptSputnik.getAngle());
-   pDemo->ptSputnik.draw(gout);
    pDemo->ptHubble.draw(gout);
+   pDemo->ptSputnik.draw(gout);
+   pDemo->ptStarlink.draw(gout);
+   pDemo->ptCrewDragon.draw(gout);
+   pDemo->ptShip.draw(gout);
+   pDemo->ptGPS1.draw(gout);
+   pDemo->ptGPS2.draw(gout);
+   pDemo->ptGPS3.draw(gout);
+   pDemo->ptGPS4.draw(gout);
+   pDemo->ptGPS5.draw(gout);
+   pDemo->ptGPS6.draw(gout);
+ /*  for (auto gps : pDemo->GPSArray) {
+       gps.draw(gout);
+       gps.move(tpf);
+   }*/
    // gout.drawStarlink  (pDemo->ptStarlink,   pDemo->angleShip);
    // gout.drawShip      (pDemo->ptShip,       pDemo->angleShip, pUI->isSpace());
    // gout.drawGPS       (pDemo->ptGPS,        pDemo->angleShip);

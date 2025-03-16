@@ -1,6 +1,6 @@
 /***********************************************************************
  * Test File:
- *    Satellite
+ *    SATELLITE
  * Author:
  *    Tyler Philips, Cesar Tavarez, and Boston Stamm
  * Summary:
@@ -14,7 +14,6 @@
 
  /*********************************************
   * TEST SATELLITE
-  * Unit tests for Acceleration
   *********************************************/
 class TestSatellite : public UnitTest {
 public:

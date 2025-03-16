@@ -19,17 +19,18 @@ class Sputnik : public Satellite {
 public:
 	Sputnik() : Satellite() {
 		position.setMeters(-36515095.13, 21082000.0);
-		velocity.setDX(2050);
-		velocity.setDY(2684);
+		velocity.setDX(2050.0);
+		velocity.setDY(2684.68);
 		radius = 4.0 * position.getZoom();
-		angularVelocity = .001;
+		angularVelocity = 0.03;
 		dead = false;
 	}
 	void draw(ogstream& pgout) {
-		pgout.drawSputnik(position, angle.getRadians());
+		if (!isDead()) {
+			pgout.drawSputnik(position, angle.getRadians());
+		}
 	}
 	void destroy(Satellite& satellite) {
 
 	}
-	void move(float time) override;
 };

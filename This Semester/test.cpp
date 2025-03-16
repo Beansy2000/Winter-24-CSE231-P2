@@ -14,6 +14,11 @@
 #include "testVelocity.h"
 #include "testSatellite.h"
 #include "testSputnik.h"
+#include "testCrewDragon.h"
+#include "testGPS.h"
+#include "testHubble.h"
+#include "testShip.h"
+#include "testStarlink.h"
 
 #ifdef _WIN32
 #include <windows.h>
@@ -40,4 +45,9 @@ void testRunner()
    TestVelocity().run();
    TestSatellite().run();
    TestSputnik().run();
+   TestCrewDragon().run();
+   TestGPS().run();
+   TestHubble().run();
+   testShip().run();
+   TestStarlink().run();
 }

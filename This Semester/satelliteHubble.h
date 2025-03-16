@@ -1,10 +1,10 @@
 /***********************************************************************
  * Header File:
- *    Hubble
+ *    HUBBLE
  * Author:
  *    Tyler Philips, Cesar Tavarez, and Boston Stamm
  * Summary:
- *    The Sputnik Satellite class
+ *    The Hubble Satellite class
  ************************************************************************/
 #pragma once
 #include "satellite.h"
@@ -13,23 +13,24 @@
 
 
  /***************************************************
-  * SPUTNIK : SATELLITE
+  * HUBBLE : SATELLITE
   ***************************************************/
 class Hubble : public Satellite {
 public:
 	Hubble() : Satellite() {
-		position.setMeters(-36515095.13, 21082000.0);
-		velocity.setDX(2050);
-		velocity.setDY(2684);
-		radius = 4.0 * position.getZoom();
-		angularVelocity = .001;
+		position.setMeters(0.0, -42164000.0);
+		velocity.setDX(3100);
+		velocity.setDY(0.0);
+		radius = 10.0 * position.getZoom();
+		angularVelocity = 0;
 		dead = false;
 	}
 	void draw(ogstream& pgout) {
-		pgout.drawHubble(position, angle.getRadians());
+		if (!isDead()) {
+			pgout.drawHubble(position, angle.getRadians());
+		}
 	}
 	void destroy(Satellite& satellite) {
 
 	}
-	void move(float time) override;
 };
