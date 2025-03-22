@@ -31,6 +31,9 @@ public:
 		angle.setRadians(0.0040469023027);
 	}
 
+	float getRadius() const { return radius; }
+	Position getPosition() const { return position; }
+
 	void draw(ogstream& pgout) {
 		pgout.drawEarth(position, angle.getRadians());
 	}

@@ -27,6 +27,10 @@ public:
 		angularVelocity = 0;
 		dead = false;
 	}
+	void addPixelsY(double dy) { position.addPixelsY(dy); }
+	void addPixelsX(double dx) { position.addPixelsX(dx); }
+	void rotateLeft() { angle.setRadians(angle.getRadians() - 0.02); }
+	void rotateRight() { angle.setRadians(angle.getRadians() + 0.02); }
 	void draw(ogstream& pgout) {
 		if (!isDead()) {
 			pgout.drawShip(position, angle.getRadians(), drawThrust);
@@ -35,5 +39,6 @@ public:
 	void destroy(Satellite& satellite) {
 
 	}
+	void move(float time) override {}
 	//void input(const Interface* pUI);
 };

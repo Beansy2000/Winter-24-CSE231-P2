@@ -28,8 +28,11 @@
 #include "satelliteGPS.h"
 #include "satelliteStarlink.h"
 #include "satelliteShip.h"
+#include "projectile.h"
 #include "earth.h"
 #include "list"
+#include "collision.h"
+#include "algorithm"
 using namespace std;
 
 /*************************************************************************
@@ -39,48 +42,20 @@ using namespace std;
 class Demo
 {
 public:
-   Demo(Position ptUpperRight) :
-      ptUpperRight(ptUpperRight)
+    Demo(Position ptUpperRight) :
+        ptUpperRight(ptUpperRight)
    {
-      // ptHubble.setPixelsX(ptUpperRight.getPixelsX() * random(-0.5, 0.5));
-      // ptHubble.setPixelsY(ptUpperRight.getPixelsY() * random(-0.5, 0.5));
-
-      // ptStarlink.setPixelsX(ptUpperRight.getPixelsX() * random(-0.5, 0.5));
-      // ptStarlink.setPixelsY(ptUpperRight.getPixelsY() * random(-0.5, 0.5));
-      // 
-      // ptCrewDragon.setPixelsX(ptUpperRight.getPixelsX() * random(-0.5, 0.5));
-      // ptCrewDragon.setPixelsY(ptUpperRight.getPixelsY() * random(-0.5, 0.5));
-      // 
-      // ptShip.setPixelsX(ptUpperRight.getPixelsX() * random(-0.5, 0.5));
-      // ptShip.setPixelsY(ptUpperRight.getPixelsY() * random(-0.5, 0.5));
-      // 
-      // ptGPS.setPixelsX(ptUpperRight.getPixelsX() * random(-0.5, 0.5));
-      // ptGPS.setPixelsY(ptUpperRight.getPixelsY() * random(-0.5, 0.5));
-      
 		stars.resetStars(ptUpperRight.getPixelsX(), ptUpperRight.getPixelsY());
-
    }
-
+   Collision ptCollision;
    Earth ptEarth;
-   Hubble ptHubble;
-   Sputnik ptSputnik;
-   Starlink ptStarlink;
-   CrewDragon ptCrewDragon;
    Ship ptShip;
-   GPS ptGPS1 = GPS(1);
-   GPS ptGPS2 = GPS(2);
-   GPS ptGPS3 = GPS(3);
-   GPS ptGPS4 = GPS(4);
-   GPS ptGPS5 = GPS(5);
-   GPS ptGPS6 = GPS(6);
-   //list<GPS> GPSArray{GPS(1), GPS(2), GPS(3), GPS(4), GPS(5), GPS(6)};
    Position ptStar;
    Position ptUpperRight;
    Stars stars;
-   // Acceleration gravity;
-
-   // Angle angleShip;
-   // double angleEarth;
+   list<Projectile*> projectiles;
+   list<Satellite*> Satellites{ new Hubble, new Sputnik, new Starlink, new CrewDragon, new GPS(1), new GPS(2),
+       new GPS(3), new GPS(4), new GPS(5), new GPS(6), &ptShip };
 };
 
 /*************************************
@@ -101,31 +76,78 @@ void callBack(const Interface* pUI, void* p)
    //
    // accept input
    //
-  /* if (pUI->isUp())
-      pDemo->ptShip.addPixelsY(1.0);
-   if (pUI->isDown())
-      pDemo->ptShip.addPixelsY(-1.0);
-   if (pUI->isLeft())
-      pDemo->ptShip.addPixelsX(-1.0);
-   if (pUI->isRight())
-      pDemo->ptShip.addPixelsX(1.0);*/
+   if (std::find(pDemo->Satellites.begin(), pDemo->Satellites.end(), &pDemo->ptShip) != pDemo->Satellites.end()) {
+       if (pUI->isUp()) {
+           pDemo->ptShip.addPixelsY(cos(pDemo->ptShip.getAngle()));
+           pDemo->ptShip.addPixelsX(sin(pDemo->ptShip.getAngle()));
+           pDemo->ptShip.drawThrust = true;
+       }
+       else {
+           pDemo->ptShip.drawThrust = false;
+       }
+       //if (pUI->isDown())
+       //    pDemo->ptShip.addPixelsY(-cos(pDemo->ptShip.getAngle()));
+       //    pDemo->ptShip.addPixelsX(-sin(pDemo->ptShip.getAngle()));
+       if (pUI->isLeft())
+           pDemo->ptShip.rotateLeft();
+       if (pUI->isRight())
+           pDemo->ptShip.rotateRight();
+       if (pUI->isSpace()) {
+           pDemo->projectiles.push_back(new Projectile(pDemo->ptShip));
+       }
+   }
 
    // move by a little
+   // collision detection and destruction
    pDemo->ptEarth.rotate(td);
-   pDemo->ptHubble.move(tpf);
-   pDemo->ptSputnik.move(tpf);
-   pDemo->ptStarlink.move(tpf);
-   pDemo->ptCrewDragon.move(tpf);
-   pDemo->ptShip.move(tpf);
-   pDemo->ptGPS1.move(tpf);
-   pDemo->ptGPS2.move(tpf);
-   pDemo->ptGPS3.move(tpf);
-   pDemo->ptGPS4.move(tpf);
-   pDemo->ptGPS5.move(tpf);
-   pDemo->ptGPS6.move(tpf);
-   /*for (auto gps : pDemo->GPSArray) {
-       gps.move(tpf);
-   }*/
+   sattosatcollision:
+   for (auto satellite : pDemo->Satellites) {
+       satellite->move(tpf);
+       for (auto satelliteB : pDemo->Satellites) {
+           if (satellite != satelliteB) {
+               if (pDemo->ptCollision.IsColliding(*satellite, *satelliteB)) {
+                   pDemo->Satellites.remove(satellite);
+                   pDemo->Satellites.remove(satelliteB);
+                   satellite->destroy(*satelliteB);
+                   satelliteB->destroy(*satellite);
+                   satellite = nullptr;
+                   satelliteB = nullptr;
+                   goto sattosatcollision;
+               }
+           }
+       }
+   }
+   sattoearthcollision:
+   for (auto satellite : pDemo->Satellites) {
+       if (pDemo->ptCollision.IsColliding(*satellite, pDemo->ptEarth)) {
+           pDemo->Satellites.remove(satellite);
+           satellite->destroy();
+           satellite = nullptr;
+           goto sattoearthcollision;
+       }
+   }
+   projectileexpiration:
+   for (auto projectile : pDemo->projectiles) {
+       projectile->move(tpf);
+       if (projectile->expirationTimer <= 0) {
+           pDemo->projectiles.remove(projectile);
+           projectile = nullptr;
+           goto projectileexpiration;
+       }
+   }
+   sattoprojectilecollision:
+   for (auto projectile : pDemo->projectiles) {
+       for (auto satellite : pDemo->Satellites) {
+           if (pDemo->ptCollision.IsColliding(*satellite, *projectile) and satellite != &pDemo->ptShip) {
+               pDemo->Satellites.remove(satellite);
+               satellite->destroy();
+               pDemo->projectiles.remove(projectile);
+               satellite = nullptr;
+               projectile = nullptr;
+               goto sattoprojectilecollision;
+           }
+       }
+   }
 
    //
    // perform all the game logic
@@ -158,29 +180,17 @@ void callBack(const Interface* pUI, void* p)
 
    Position pt;
    ogstream gout(pt);
+   // draw all the stars
+   pDemo->stars.draw(gout);
 
    // draw satellites
-   // gout.drawCrewDragon(pDemo->ptCrewDragon, pDemo->angleShip);
-   // gout.drawHubble    (pDemo->ptHubble,     pDemo->angleShip);
-   // gout.drawSputnik   (pDemo->ptSputnik.getPosition(), pDemo->ptSputnik.getAngle());
-   pDemo->ptHubble.draw(gout);
-   pDemo->ptSputnik.draw(gout);
-   pDemo->ptStarlink.draw(gout);
-   pDemo->ptCrewDragon.draw(gout);
-   pDemo->ptShip.draw(gout);
-   pDemo->ptGPS1.draw(gout);
-   pDemo->ptGPS2.draw(gout);
-   pDemo->ptGPS3.draw(gout);
-   pDemo->ptGPS4.draw(gout);
-   pDemo->ptGPS5.draw(gout);
-   pDemo->ptGPS6.draw(gout);
- /*  for (auto gps : pDemo->GPSArray) {
-       gps.draw(gout);
-       gps.move(tpf);
-   }*/
-   // gout.drawStarlink  (pDemo->ptStarlink,   pDemo->angleShip);
-   // gout.drawShip      (pDemo->ptShip,       pDemo->angleShip, pUI->isSpace());
-   // gout.drawGPS       (pDemo->ptGPS,        pDemo->angleShip);
+   for (auto projectile : pDemo->projectiles) {
+       projectile->draw(gout);
+   }
+   for (auto satellite : pDemo->Satellites) {
+       satellite->draw(gout);
+   }
+   //pDemo->ptShip.draw(gout);
 
    // draw parts
    // pt.setPixelsX(pDemo->ptCrewDragon.getPixelsX() + 20);
@@ -204,13 +214,9 @@ void callBack(const Interface* pUI, void* p)
    // pt.setPixelsY(pDemo->ptShip.getPixelsY() + 20);
    // gout.drawFragment(pt, pDemo->angleShip);
 
-   // draw all the stars
-   pDemo->stars.draw(gout);
 
    // draw the earth
    pDemo->ptEarth.draw(gout);
-   /*pt.setMeters(0.0, 0.0);
-   gout.drawEarth(pt, pDemo->angleEarth);*/
 }
 
 double Position::metersFromPixels = 40.0;

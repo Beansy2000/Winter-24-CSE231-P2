@@ -141,9 +141,11 @@
   <ItemGroup>
     <ClCompile Include="acceleration.cpp" />
     <ClCompile Include="angle.cpp" />
+    <ClCompile Include="collision.cpp" />
     <ClCompile Include="Lab07.cpp" />
     <ClCompile Include="physics.cpp" />
     <ClCompile Include="position.cpp" />
+    <ClCompile Include="projectile.cpp" />
     <ClCompile Include="satellite.cpp" />
     <ClCompile Include="satelliteGPS.h" />
     <ClCompile Include="test.cpp" />
@@ -154,9 +156,11 @@
   <ItemGroup>
     <ClInclude Include="acceleration.h" />
     <ClInclude Include="angle.h" />
+    <ClInclude Include="collision.h" />
     <ClInclude Include="earth.h" />
     <ClInclude Include="physics.h" />
     <ClInclude Include="position.h" />
+    <ClInclude Include="projectile.h" />
     <ClInclude Include="satellite.h" />
     <ClInclude Include="satelliteCrewDragon.h" />
     <ClInclude Include="satelliteHubble.h" />
