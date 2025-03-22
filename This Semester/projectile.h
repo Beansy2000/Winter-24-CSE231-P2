@@ -21,7 +21,7 @@ class Projectile {
 	Position position;
 	Physics physics;
 	Angle angle;
-	double radius = 0;
+	double radius = 1;
 public:
 	Projectile(Satellite& ptShip) {
 		velocity = ptShip.getVelocity();
@@ -30,6 +30,9 @@ public:
 		angle.setRadians(ptShip.getAngle());
 		position.setPixelsX(position.getPixelsX() + sin(angle.getRadians())*18);
 		position.setPixelsY(position.getPixelsY() + cos(angle.getRadians())*18);
+	}
+	Projectile(double dx, double dy) {
+		position.setMeters(dx, dy);
 	}
 
 	bool isDead = true;

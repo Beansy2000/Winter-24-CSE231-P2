@@ -19,6 +19,7 @@
 #include "testHubble.h"
 #include "testShip.h"
 #include "testStarlink.h"
+#include "testCollision.h"
 
 #ifdef _WIN32
 #include <windows.h>
@@ -50,4 +51,5 @@ void testRunner()
    TestHubble().run();
    testShip().run();
    TestStarlink().run();
+   TestCollision().run();
 }

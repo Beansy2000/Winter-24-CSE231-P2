@@ -25,6 +25,14 @@ public:
 		angularVelocity = 0;
 		dead = false;
 	}
+	Hubble(double dx, double dy) : Satellite() {
+		position.setMeters(dx, -dy);
+		velocity.setDX(3100);
+		velocity.setDY(0.0);
+		radius = 10.0 * position.getZoom();
+		angularVelocity = 0;
+		dead = false;
+	}
 	void draw(ogstream& pgout) {
 		if (!isDead()) {
 			pgout.drawHubble(position, angle.getRadians());

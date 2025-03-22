@@ -21,6 +21,9 @@ class testShip : public UnitTest {
 public:
 	void run() {
 		defaultConstructor();
+		turnLeft();
+		turnRight();
+		moveForward();
 		report("Ship");
 	}
 private:
@@ -42,5 +45,44 @@ private:
 		assertUnit(s.getPosition() == p);
 		assertUnit(s.getVelocity().getDX() == v.getDX());
 		assertUnit(s.getVelocity().getDY() == v.getDY());
+	}
+	void turnLeft() {
+		// SETUP
+		Ship s;
+		Angle a;
+
+		// Action
+		a.setRadians(s.getAngle() - 0.02);
+		s.rotateLeft();
+
+		// TEST
+		assertUnit(s.getAngle() == a.getRadians());
+	}
+	void turnRight() {
+		// SETUP
+		Ship s;
+		Angle a;
+
+		// Action
+		a.setRadians(s.getAngle() + 0.02);
+		s.rotateRight();
+
+		// TEST
+		assertUnit(s.getAngle() == a.getRadians());
+	}
+	void moveForward() {
+		// SETUP
+		Ship s;
+		Position p;
+
+		// Action
+		p.setMeters(s.getMetersX(), s.getMetersY());
+		p.addPixelsX(sin(s.getAngle()));
+		p.addPixelsY(cos(s.getAngle()));
+		s.drive();
+
+		// TEST
+		assertUnit(s.isThrusting() == true);
+		assertUnit(s.getPosition() == p);
 	}
 };

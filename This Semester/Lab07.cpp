@@ -78,9 +78,7 @@ void callBack(const Interface* pUI, void* p)
    //
    if (std::find(pDemo->Satellites.begin(), pDemo->Satellites.end(), &pDemo->ptShip) != pDemo->Satellites.end()) {
        if (pUI->isUp()) {
-           pDemo->ptShip.addPixelsY(cos(pDemo->ptShip.getAngle()));
-           pDemo->ptShip.addPixelsX(sin(pDemo->ptShip.getAngle()));
-           pDemo->ptShip.drawThrust = true;
+           pDemo->ptShip.drive();
        }
        else {
            pDemo->ptShip.drawThrust = false;
