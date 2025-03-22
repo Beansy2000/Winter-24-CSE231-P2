@@ -65,6 +65,7 @@ public:
 	// METHODS
 	virtual void draw(ogstream& gout) {}
 	virtual void destroy(Satellite& satellite) {}
+	virtual void destroy(Projectile& projectile) {}
 	virtual void destroy() {}
 	virtual void move(float time);
 };

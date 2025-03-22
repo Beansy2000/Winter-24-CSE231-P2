@@ -138,7 +138,7 @@ void callBack(const Interface* pUI, void* p)
        for (auto satellite : pDemo->Satellites) {
            if (pDemo->ptCollision.IsColliding(*satellite, *projectile) and satellite != &pDemo->ptShip) {
                pDemo->Satellites.remove(satellite);
-               satellite->destroy();
+               satellite->destroy(*projectile);
                pDemo->projectiles.remove(projectile);
                satellite = nullptr;
                projectile = nullptr;

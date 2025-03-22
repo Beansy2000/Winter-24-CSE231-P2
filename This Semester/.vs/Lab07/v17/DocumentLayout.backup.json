@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F1E52473-1D09-448D-BDBA-28DFE55DB99E}|Lab07.vcxproj|C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\Lab07.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F1E52473-1D09-448D-BDBA-28DFE55DB99E}|Lab07.vcxproj|solutionrelative:Lab07.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1E52473-1D09-448D-BDBA-28DFE55DB99E}|Lab07.vcxproj|C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\satellite.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F1E52473-1D09-448D-BDBA-28DFE55DB99E}|Lab07.vcxproj|solutionrelative:satellite.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F1E52473-1D09-448D-BDBA-28DFE55DB99E}|Lab07.vcxproj|C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\testShip.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{F1E52473-1D09-448D-BDBA-28DFE55DB99E}|Lab07.vcxproj|solutionrelative:testShip.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F1E52473-1D09-448D-BDBA-28DFE55DB99E}|Lab07.vcxproj|C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\satelliteShip.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{F1E52473-1D09-448D-BDBA-28DFE55DB99E}|Lab07.vcxproj|solutionrelative:satelliteShip.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F1E52473-1D09-448D-BDBA-28DFE55DB99E}|Lab07.vcxproj|C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\Lab07.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F1E52473-1D09-448D-BDBA-28DFE55DB99E}|Lab07.vcxproj|solutionrelative:Lab07.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F1E52473-1D09-448D-BDBA-28DFE55DB99E}|Lab07.vcxproj|C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\projectile.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -45,10 +49,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{F1E52473-1D09-448D-BDBA-28DFE55DB99E}|Lab07.vcxproj|C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\collision.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{F1E52473-1D09-448D-BDBA-28DFE55DB99E}|Lab07.vcxproj|solutionrelative:collision.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F1E52473-1D09-448D-BDBA-28DFE55DB99E}|Lab07.vcxproj|C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\satellite.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F1E52473-1D09-448D-BDBA-28DFE55DB99E}|Lab07.vcxproj|solutionrelative:satellite.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F1E52473-1D09-448D-BDBA-28DFE55DB99E}|Lab07.vcxproj|C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\satelliteSputnik.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -102,7 +102,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "testCollision.h",
               "DocumentMoniker": "C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\testCollision.h",
               "RelativeDocumentMoniker": "testCollision.h",
@@ -110,12 +110,11 @@
               "RelativeToolTip": "testCollision.h",
               "ViewState": "AgIAABUAAAAAAAAAAAAAAFQAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-03-22T19:00:17.088Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-22T19:00:17.088Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "testShip.h",
               "DocumentMoniker": "C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\testShip.h",
               "RelativeDocumentMoniker": "testShip.h",
@@ -130,8 +129,131 @@
         },
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 8,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "satelliteSputnik.h",
+              "DocumentMoniker": "C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\satelliteSputnik.h",
+              "RelativeDocumentMoniker": "satelliteSputnik.h",
+              "ToolTip": "C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\satelliteSputnik.h",
+              "RelativeToolTip": "satelliteSputnik.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-14T22:04:26.432Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "projectile.h",
+              "DocumentMoniker": "C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\projectile.h",
+              "RelativeDocumentMoniker": "projectile.h",
+              "ToolTip": "C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\projectile.h",
+              "RelativeToolTip": "projectile.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-22T06:45:20.556Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "testAngle.h",
+              "DocumentMoniker": "C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\testAngle.h",
+              "RelativeDocumentMoniker": "testAngle.h",
+              "ToolTip": "C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\testAngle.h",
+              "RelativeToolTip": "testAngle.h",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAEcAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-14T21:22:00.788Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "test.cpp",
+              "DocumentMoniker": "C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\test.cpp",
+              "RelativeDocumentMoniker": "test.cpp",
+              "ToolTip": "C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\test.cpp",
+              "RelativeToolTip": "test.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-14T21:05:43.774Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "satelliteGPS.h",
+              "DocumentMoniker": "C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\satelliteGPS.h",
+              "RelativeDocumentMoniker": "satelliteGPS.h",
+              "ToolTip": "C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\satelliteGPS.h",
+              "RelativeToolTip": "satelliteGPS.h",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAADQAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-16T05:36:08.584Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "satelliteShip.h",
+              "DocumentMoniker": "C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\satelliteShip.h",
+              "RelativeDocumentMoniker": "satelliteShip.h",
+              "ToolTip": "C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\satelliteShip.h",
+              "RelativeToolTip": "satelliteShip.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-22T20:02:01.658Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "satelliteHubble.h",
+              "DocumentMoniker": "C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\satelliteHubble.h",
+              "RelativeDocumentMoniker": "satelliteHubble.h",
+              "ToolTip": "C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\satelliteHubble.h",
+              "RelativeToolTip": "satelliteHubble.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-22T19:12:48.426Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "satellite.h",
+              "DocumentMoniker": "C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\satellite.h",
+              "RelativeDocumentMoniker": "satellite.h",
+              "ToolTip": "C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\satellite.h",
+              "RelativeToolTip": "satellite.h",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAEMAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-16T06:51:38.963Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Lab07.cpp",
+              "DocumentMoniker": "C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\Lab07.cpp",
+              "RelativeDocumentMoniker": "Lab07.cpp",
+              "ToolTip": "C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\Lab07.cpp",
+              "RelativeToolTip": "Lab07.cpp",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAwwGUAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-09T22:51:42.597Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "collision.h",
+              "DocumentMoniker": "C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\collision.h",
+              "RelativeDocumentMoniker": "collision.h",
+              "ToolTip": "C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\collision.h",
+              "RelativeToolTip": "collision.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-22T08:15:10.35Z"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 14,
@@ -147,135 +269,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "collision.h",
-              "DocumentMoniker": "C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\collision.h",
-              "RelativeDocumentMoniker": "collision.h",
-              "ToolTip": "C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\collision.h",
-              "RelativeToolTip": "collision.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-03-22T08:15:10.35Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "satelliteSputnik.h",
-              "DocumentMoniker": "C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\satelliteSputnik.h",
-              "RelativeDocumentMoniker": "satelliteSputnik.h",
-              "ToolTip": "C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\satelliteSputnik.h",
-              "RelativeToolTip": "satelliteSputnik.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-03-14T22:04:26.432Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "projectile.h",
-              "DocumentMoniker": "C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\projectile.h",
-              "RelativeDocumentMoniker": "projectile.h",
-              "ToolTip": "C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\projectile.h",
-              "RelativeToolTip": "projectile.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-03-22T06:45:20.556Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "testAngle.h",
-              "DocumentMoniker": "C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\testAngle.h",
-              "RelativeDocumentMoniker": "testAngle.h",
-              "ToolTip": "C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\testAngle.h",
-              "RelativeToolTip": "testAngle.h",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAAEcAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-03-14T21:22:00.788Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "test.cpp",
-              "DocumentMoniker": "C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\test.cpp",
-              "RelativeDocumentMoniker": "test.cpp",
-              "ToolTip": "C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\test.cpp",
-              "RelativeToolTip": "test.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-14T21:05:43.774Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "satelliteGPS.h",
-              "DocumentMoniker": "C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\satelliteGPS.h",
-              "RelativeDocumentMoniker": "satelliteGPS.h",
-              "ToolTip": "C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\satelliteGPS.h",
-              "RelativeToolTip": "satelliteGPS.h",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAADQAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-03-16T05:36:08.584Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "satelliteShip.h",
-              "DocumentMoniker": "C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\satelliteShip.h",
-              "RelativeDocumentMoniker": "satelliteShip.h",
-              "ToolTip": "C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\satelliteShip.h",
-              "RelativeToolTip": "satelliteShip.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-03-22T20:02:01.658Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "satelliteHubble.h",
-              "DocumentMoniker": "C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\satelliteHubble.h",
-              "RelativeDocumentMoniker": "satelliteHubble.h",
-              "ToolTip": "C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\satelliteHubble.h",
-              "RelativeToolTip": "satelliteHubble.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-03-22T19:12:48.426Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Lab07.cpp",
-              "DocumentMoniker": "C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\Lab07.cpp",
-              "RelativeDocumentMoniker": "Lab07.cpp",
-              "ToolTip": "C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\Lab07.cpp",
-              "RelativeToolTip": "Lab07.cpp",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAwwFAAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-09T22:51:42.597Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "satellite.h",
-              "DocumentMoniker": "C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\satellite.h",
-              "RelativeDocumentMoniker": "satellite.h",
-              "ToolTip": "C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\satellite.h",
-              "RelativeToolTip": "satellite.h",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAEMAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-03-16T06:51:38.963Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
               "Title": "collision.cpp",
               "DocumentMoniker": "C:\\Users\\Boston\\Desktop\\Github Repos\\Winter-24-CSE231-P2\\This Semester\\collision.cpp",
               "RelativeDocumentMoniker": "collision.cpp",
@@ -283,8 +276,7 @@
               "RelativeToolTip": "collision.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-22T08:21:31.654Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-22T08:21:31.654Z"
             },
             {
               "$type": "Document",
