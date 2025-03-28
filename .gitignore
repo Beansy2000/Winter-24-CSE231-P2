@@ -7,6 +7,11 @@ Lab03.vcxproj
 Lab03.vcxproj.filters
 Lab03.vcxproj.user
 
+# Ignore Visual Studio-specific files and directories
+.vs/
+.vs2019/
+.vs2017/
+
 # ignore files for linux compilation
 obj/
 chess
