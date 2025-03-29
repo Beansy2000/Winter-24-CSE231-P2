@@ -16,6 +16,7 @@
 #include "acceleration.h"
 #include "uiDraw.h"
 #include "uiInteract.h"
+#include "parts.h"
 
 class Projectile; //this is a forward declaration
 
@@ -30,13 +31,16 @@ protected:
 	Position position;
 	Physics physics;
 	Angle angle;
+	SatelliteType type;
 	double angularVelocity = 0;
 	bool dead = true;
 	double radius = 0;
 
 public:
 	// Default constructor
-	Satellite(double radius = 0.0, double angularVelocity = 0.0) : angularVelocity(angularVelocity), dead(true), radius(radius) {}
+	Satellite(SatelliteType type, double radius = 0.0, double angularVelocity = 0.0)
+		: type(type), angularVelocity(angularVelocity), dead(true), radius(radius) {}
+
 	
 	// VARIABLES
 	// Get protected variables
@@ -47,6 +51,7 @@ public:
 	double getAngularVelocity() const { return angularVelocity; }
 	bool isDead() const { return dead; }
 	float getRadius() const { return radius; }
+	SatelliteType getType() const { return type; }
 
 	// Get internal variables
 	double getMetersX() { return position.getMetersX(); }
@@ -61,12 +66,19 @@ public:
 	void setDX(double dX) { velocity.setDX(dX); }
 	void setDY(double dY) { velocity.setDY(dY); }
 	void setAngle(float radians) { angle.setRadians(radians); }
-	void kill() { dead = true; }
+	void setType(SatelliteType newType) { type = newType; }
+
+	void kill() {
+		dead = true;
+		velocity.setDX(0);
+		velocity.setDY(0);
+	}
 
 	// METHODS
 	virtual void draw(ogstream& gout) {}
-	virtual void destroy(Satellite& satellite) {}
-	virtual void destroy(Projectile& projectile);
-	virtual void destroy() {}
+	virtual void destroy(std::vector<Satellite*>& satellites) = 0;
+	virtual void destroy(Projectile& projectile) = 0;
+	virtual void destroy() = 0;  // Pure virtual function
+
 	virtual void move(float time);
 };
