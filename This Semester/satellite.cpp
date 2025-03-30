@@ -7,7 +7,7 @@
  *    Everything we need to know about the base class for satellites
  ************************************************************************/
 #pragma once
-#include "projectile.h" // Now the full definition of Projectile is available
+
 #include "satellite.h"
 
 /*************************************
@@ -34,11 +34,4 @@ void Satellite::move(float time) {
 
 	// Rotate
 	angle.add(angularVelocity);
-}
-
-
-#include "projectile.h" // Now the full definition of Projectile is available
-
-void Satellite::destroy(Projectile& projectile) {
-	// Implement destruction logic here
 }

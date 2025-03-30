@@ -143,7 +143,6 @@
     <ClCompile Include="angle.cpp" />
     <ClCompile Include="collision.cpp" />
     <ClCompile Include="Lab07.cpp" />
-    <ClCompile Include="parts.cpp" />
     <ClCompile Include="physics.cpp" />
     <ClCompile Include="position.cpp" />
     <ClCompile Include="projectile.cpp" />
@@ -159,7 +158,6 @@
     <ClInclude Include="angle.h" />
     <ClInclude Include="collision.h" />
     <ClInclude Include="earth.h" />
-    <ClInclude Include="parts.h" />
     <ClInclude Include="physics.h" />
     <ClInclude Include="position.h" />
     <ClInclude Include="projectile.h" />
