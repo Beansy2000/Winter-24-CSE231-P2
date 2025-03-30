@@ -11,18 +11,6 @@
       "RelativeMoniker": "D:0:0:{F1E52473-1D09-448D-BDBA-28DFE55DB99E}|Lab07.vcxproj|solutionrelative:satellite.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F1E52473-1D09-448D-BDBA-28DFE55DB99E}|Lab07.vcxproj|C:\\A_Senior_Year\\Semester_one\\a_inheritance_design\\fianl2Weeks\\Winter-24-CSE231-P2\\This Semester\\parts.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F1E52473-1D09-448D-BDBA-28DFE55DB99E}|Lab07.vcxproj|solutionrelative:parts.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F1E52473-1D09-448D-BDBA-28DFE55DB99E}|Lab07.vcxproj|C:\\A_Senior_Year\\Semester_one\\a_inheritance_design\\fianl2Weeks\\Winter-24-CSE231-P2\\This Semester\\collision.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F1E52473-1D09-448D-BDBA-28DFE55DB99E}|Lab07.vcxproj|solutionrelative:collision.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F1E52473-1D09-448D-BDBA-28DFE55DB99E}|Lab07.vcxproj|C:\\A_Senior_Year\\Semester_one\\a_inheritance_design\\fianl2Weeks\\Winter-24-CSE231-P2\\This Semester\\collision.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F1E52473-1D09-448D-BDBA-28DFE55DB99E}|Lab07.vcxproj|solutionrelative:collision.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F1E52473-1D09-448D-BDBA-28DFE55DB99E}|Lab07.vcxproj|C:\\A_Senior_Year\\Semester_one\\a_inheritance_design\\fianl2Weeks\\Winter-24-CSE231-P2\\This Semester\\projectile.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{F1E52473-1D09-448D-BDBA-28DFE55DB99E}|Lab07.vcxproj|solutionrelative:projectile.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -49,6 +37,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{F1E52473-1D09-448D-BDBA-28DFE55DB99E}|Lab07.vcxproj|C:\\A_Senior_Year\\Semester_one\\a_inheritance_design\\fianl2Weeks\\Winter-24-CSE231-P2\\This Semester\\test.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{F1E52473-1D09-448D-BDBA-28DFE55DB99E}|Lab07.vcxproj|solutionrelative:test.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1E52473-1D09-448D-BDBA-28DFE55DB99E}|Lab07.vcxproj|C:\\A_Senior_Year\\Semester_one\\a_inheritance_design\\fianl2Weeks\\Winter-24-CSE231-P2\\This Semester\\collision.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F1E52473-1D09-448D-BDBA-28DFE55DB99E}|Lab07.vcxproj|solutionrelative:collision.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1E52473-1D09-448D-BDBA-28DFE55DB99E}|Lab07.vcxproj|C:\\A_Senior_Year\\Semester_one\\a_inheritance_design\\fianl2Weeks\\Winter-24-CSE231-P2\\This Semester\\collision.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F1E52473-1D09-448D-BDBA-28DFE55DB99E}|Lab07.vcxproj|solutionrelative:collision.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F1E52473-1D09-448D-BDBA-28DFE55DB99E}|Lab07.vcxproj|C:\\A_Senior_Year\\Semester_one\\a_inheritance_design\\fianl2Weeks\\Winter-24-CSE231-P2\\This Semester\\satelliteSputnik.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -94,24 +90,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 244,
-          "SelectedChildIndex": 14,
+          "SelectedChildIndex": 13,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "parts.h",
-              "DocumentMoniker": "C:\\A_Senior_Year\\Semester_one\\a_inheritance_design\\fianl2Weeks\\Winter-24-CSE231-P2\\This Semester\\parts.h",
-              "RelativeDocumentMoniker": "parts.h",
-              "ToolTip": "C:\\A_Senior_Year\\Semester_one\\a_inheritance_design\\fianl2Weeks\\Winter-24-CSE231-P2\\This Semester\\parts.h*",
-              "RelativeToolTip": "parts.h*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-03-28T20:49:51.283Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
               "Title": "satelliteSputnik.h",
               "DocumentMoniker": "C:\\A_Senior_Year\\Semester_one\\a_inheritance_design\\fianl2Weeks\\Winter-24-CSE231-P2\\This Semester\\satelliteSputnik.h",
               "RelativeDocumentMoniker": "satelliteSputnik.h",
@@ -123,7 +106,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "projectile.h",
               "DocumentMoniker": "C:\\A_Senior_Year\\Semester_one\\a_inheritance_design\\fianl2Weeks\\Winter-24-CSE231-P2\\This Semester\\projectile.h",
               "RelativeDocumentMoniker": "projectile.h",
@@ -136,7 +119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 7,
               "Title": "testAngle.h",
               "DocumentMoniker": "C:\\A_Senior_Year\\Semester_one\\a_inheritance_design\\fianl2Weeks\\Winter-24-CSE231-P2\\This Semester\\testAngle.h",
               "RelativeDocumentMoniker": "testAngle.h",
@@ -148,7 +131,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 8,
               "Title": "test.cpp",
               "DocumentMoniker": "C:\\A_Senior_Year\\Semester_one\\a_inheritance_design\\fianl2Weeks\\Winter-24-CSE231-P2\\This Semester\\test.cpp",
               "RelativeDocumentMoniker": "test.cpp",
@@ -160,7 +143,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 6,
               "Title": "satelliteGPS.h",
               "DocumentMoniker": "C:\\A_Senior_Year\\Semester_one\\a_inheritance_design\\fianl2Weeks\\Winter-24-CSE231-P2\\This Semester\\satelliteGPS.h",
               "RelativeDocumentMoniker": "satelliteGPS.h",
@@ -172,7 +155,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
               "Title": "satelliteShip.h",
               "DocumentMoniker": "C:\\A_Senior_Year\\Semester_one\\a_inheritance_design\\fianl2Weeks\\Winter-24-CSE231-P2\\This Semester\\satelliteShip.h",
               "RelativeDocumentMoniker": "satelliteShip.h",
@@ -184,7 +167,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 5,
               "Title": "satelliteHubble.h",
               "DocumentMoniker": "C:\\A_Senior_Year\\Semester_one\\a_inheritance_design\\fianl2Weeks\\Winter-24-CSE231-P2\\This Semester\\satelliteHubble.h",
               "RelativeDocumentMoniker": "satelliteHubble.h",
@@ -202,14 +185,14 @@
               "RelativeDocumentMoniker": "satellite.h",
               "ToolTip": "C:\\A_Senior_Year\\Semester_one\\a_inheritance_design\\fianl2Weeks\\Winter-24-CSE231-P2\\This Semester\\satellite.h",
               "RelativeToolTip": "satellite.h",
-              "ViewState": "AgIAACUAAAAAAAAAAAAwwCoAAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAACUAAAAAAAAAAAAwwD0AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-03-16T06:51:38.963Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "Lab07.cpp",
               "DocumentMoniker": "C:\\A_Senior_Year\\Semester_one\\a_inheritance_design\\fianl2Weeks\\Winter-24-CSE231-P2\\This Semester\\Lab07.cpp",
               "RelativeDocumentMoniker": "Lab07.cpp",
@@ -222,20 +205,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "collision.h",
               "DocumentMoniker": "C:\\A_Senior_Year\\Semester_one\\a_inheritance_design\\fianl2Weeks\\Winter-24-CSE231-P2\\This Semester\\collision.h",
               "RelativeDocumentMoniker": "collision.h",
               "ToolTip": "C:\\A_Senior_Year\\Semester_one\\a_inheritance_design\\fianl2Weeks\\Winter-24-CSE231-P2\\This Semester\\collision.h",
               "RelativeToolTip": "collision.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-03-22T08:15:10.35Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-22T08:15:10.35Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 13,
               "Title": "projectile.cpp",
               "DocumentMoniker": "C:\\A_Senior_Year\\Semester_one\\a_inheritance_design\\fianl2Weeks\\Winter-24-CSE231-P2\\This Semester\\projectile.cpp",
               "RelativeDocumentMoniker": "projectile.cpp",
@@ -247,20 +229,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "collision.cpp",
               "DocumentMoniker": "C:\\A_Senior_Year\\Semester_one\\a_inheritance_design\\fianl2Weeks\\Winter-24-CSE231-P2\\This Semester\\collision.cpp",
               "RelativeDocumentMoniker": "collision.cpp",
               "ToolTip": "C:\\A_Senior_Year\\Semester_one\\a_inheritance_design\\fianl2Weeks\\Winter-24-CSE231-P2\\This Semester\\collision.cpp",
               "RelativeToolTip": "collision.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-22T08:21:31.654Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-22T08:21:31.654Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 12,
               "Title": "earth.h",
               "DocumentMoniker": "C:\\A_Senior_Year\\Semester_one\\a_inheritance_design\\fianl2Weeks\\Winter-24-CSE231-P2\\This Semester\\earth.h",
               "RelativeDocumentMoniker": "earth.h",
@@ -278,14 +259,14 @@
               "RelativeDocumentMoniker": "satellite.cpp",
               "ToolTip": "C:\\A_Senior_Year\\Semester_one\\a_inheritance_design\\fianl2Weeks\\Winter-24-CSE231-P2\\This Semester\\satellite.cpp",
               "RelativeToolTip": "satellite.cpp",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAwwCUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-03-16T06:50:57.262Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 15,
               "Title": "physics.cpp",
               "DocumentMoniker": "C:\\A_Senior_Year\\Semester_one\\a_inheritance_design\\fianl2Weeks\\Winter-24-CSE231-P2\\This Semester\\physics.cpp",
               "RelativeDocumentMoniker": "physics.cpp",
@@ -297,7 +278,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 16,
               "Title": "testSputnik.h",
               "DocumentMoniker": "C:\\A_Senior_Year\\Semester_one\\a_inheritance_design\\fianl2Weeks\\Winter-24-CSE231-P2\\This Semester\\testSputnik.h",
               "RelativeDocumentMoniker": "testSputnik.h",
@@ -309,7 +290,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 17,
               "Title": "testSatellite.h",
               "DocumentMoniker": "C:\\A_Senior_Year\\Semester_one\\a_inheritance_design\\fianl2Weeks\\Winter-24-CSE231-P2\\This Semester\\testSatellite.h",
               "RelativeDocumentMoniker": "testSatellite.h",
@@ -321,7 +302,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 14,
               "Title": "velocity.cpp",
               "DocumentMoniker": "C:\\A_Senior_Year\\Semester_one\\a_inheritance_design\\fianl2Weeks\\Winter-24-CSE231-P2\\This Semester\\velocity.cpp",
               "RelativeDocumentMoniker": "velocity.cpp",
@@ -333,7 +314,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 18,
               "Title": "testAcceleration.h",
               "DocumentMoniker": "C:\\A_Senior_Year\\Semester_one\\a_inheritance_design\\fianl2Weeks\\Winter-24-CSE231-P2\\This Semester\\testAcceleration.h",
               "RelativeDocumentMoniker": "testAcceleration.h",
@@ -345,7 +326,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 19,
               "Title": "testVelocity.h",
               "DocumentMoniker": "C:\\A_Senior_Year\\Semester_one\\a_inheritance_design\\fianl2Weeks\\Winter-24-CSE231-P2\\This Semester\\testVelocity.h",
               "RelativeDocumentMoniker": "testVelocity.h",

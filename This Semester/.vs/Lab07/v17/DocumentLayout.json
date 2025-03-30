@@ -94,20 +94,16 @@
       "DocumentGroups": [
         {
           "DockedWidth": 244,
-          "SelectedChildIndex": 15,
+          "SelectedChildIndex": 14,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "parts.h",
               "DocumentMoniker": "C:\\A_Senior_Year\\Semester_one\\a_inheritance_design\\fianl2Weeks\\Winter-24-CSE231-P2\\This Semester\\parts.h",
               "RelativeDocumentMoniker": "parts.h",
-              "ToolTip": "C:\\A_Senior_Year\\Semester_one\\a_inheritance_design\\fianl2Weeks\\Winter-24-CSE231-P2\\This Semester\\parts.h",
-              "RelativeToolTip": "parts.h",
+              "ToolTip": "C:\\A_Senior_Year\\Semester_one\\a_inheritance_design\\fianl2Weeks\\Winter-24-CSE231-P2\\This Semester\\parts.h*",
+              "RelativeToolTip": "parts.h*",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-03-28T20:49:51.283Z",
@@ -282,7 +278,7 @@
               "RelativeDocumentMoniker": "satellite.cpp",
               "ToolTip": "C:\\A_Senior_Year\\Semester_one\\a_inheritance_design\\fianl2Weeks\\Winter-24-CSE231-P2\\This Semester\\satellite.cpp",
               "RelativeToolTip": "satellite.cpp",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-03-16T06:50:57.262Z",
               "EditorCaption": ""
