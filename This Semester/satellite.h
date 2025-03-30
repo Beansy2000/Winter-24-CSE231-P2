@@ -17,14 +17,14 @@
 #include "uiDraw.h"
 #include "uiInteract.h"
 
-
 enum SatelliteType {
 	sGPS, HUBBLE, STARLINK, SPUTNIK, CREWDRAGON, PART, FRAGMENT
 };
 
 class Satellite {
+	friend class Projectile;
 protected:
-    // Variables inherited by Satellite classes.
+	// Variables inherited by Satellite classes.
 	Velocity velocity;
 	Position position;
 	Physics physics;
@@ -36,7 +36,7 @@ protected:
 public:
 	// Default constructor
 	Satellite(double radius = 0.0, double angularVelocity = 0.0) : angularVelocity(angularVelocity), dead(true), radius(radius) {}
-	
+
 	// VARIABLES
 	// Get protected variables
 	Velocity getVelocity() const { return velocity; }
@@ -64,8 +64,8 @@ public:
 
 	// METHODS
 	virtual void draw(ogstream& gout) {}
-	virtual void destroy(Satellite& satellite) {}
-	virtual void destroy(Projectile& projectile) {}
-	virtual void destroy() {}
+	virtual void destroy();
+	virtual void destroy(Satellite* satellite);
+	virtual void destroy(Projectile* projectile);
 	virtual void move(float time);
 };

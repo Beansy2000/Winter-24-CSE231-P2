@@ -35,3 +35,12 @@ void Satellite::move(float time) {
 	// Rotate
 	angle.add(angularVelocity);
 }
+void Satellite::destroy() {
+
+}
+void Satellite::destroy(Satellite* satellite) {
+
+}
+void Satellite::destroy(Projectile* projectile) {
+
+}
