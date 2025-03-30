@@ -138,7 +138,7 @@ void callBack(const Interface* pUI, void* p)
        for (auto satellite : pDemo->Satellites) {
            if (pDemo->ptCollision.IsColliding(*satellite, *projectile) and satellite != &pDemo->ptShip) {
                pDemo->Satellites.remove(satellite);
-               satellite->destroy(&projectile);
+               satellite->destroy(projectile);
                pDemo->projectiles.remove(projectile);
                satellite = nullptr;
                projectile = nullptr;
@@ -151,27 +151,6 @@ void callBack(const Interface* pUI, void* p)
    // perform all the game logic
    //
 
-	// Apply acceleration to velocity
-	//double sputnikX = pDemo->ptSputnik.getMetersX();
-	//double sputnikY = pDemo->ptSputnik.getMetersY();
- //  pDemo->angleShip.setRadians(pDemo->physics.getGravDirectionRadians(sputnikX, sputnikY));
-	//cout << "X: " << sputnikX << " Y: " << sputnikY << endl;
-   //pDemo->gravity.set(pDemo->angleShip, pDemo->physics.getAccelFromGravity(sputnikX, sputnikY) * 9800);
-	//cout << "Angle: " << pDemo->physics.getGravDirectionRadians(sputnikX, sputnikY) << " DDX: " << pDemo->gravity.getDDX() << " DDY: " << pDemo->gravity.getDDY() << endl;
- //  pDemo->accSputnik.setDDX(pDemo->gravity.getDDX());
- //  pDemo->accSputnik.setDDY(pDemo->gravity.getDDY());
-	//pDemo->velSputnik.add(pDemo->accSputnik, t);
-	//cout << pDemo->velSputnik.getDX() << " " << pDemo->velSputnik.getDY() << endl;
-
-	// Apply velocity to position
-	
-	//pDemo->ptSputnik.add(pDemo->accSputnik, pDemo->velSputnik, t);
-
-   // rotate the earth
-   //pDemo->angleEarth -= 0.01; // way too fast
-   //pDemo->angleEarth -= 0.003490658504; // orginal calculation, too slow
-   //pDemo->angleEarth -= 0.0040469023027; // noice
-
    //
    // draw everything
    //
@@ -181,37 +160,13 @@ void callBack(const Interface* pUI, void* p)
    // draw all the stars
    pDemo->stars.draw(gout);
 
-   // draw satellites
+   // draw projectiles and satellites
    for (auto projectile : pDemo->projectiles) {
        projectile->draw(gout);
    }
    for (auto satellite : pDemo->Satellites) {
        satellite->draw(gout);
    }
-   //pDemo->ptShip.draw(gout);
-
-   // draw parts
-   // pt.setPixelsX(pDemo->ptCrewDragon.getPixelsX() + 20);
-   // pt.setPixelsY(pDemo->ptCrewDragon.getPixelsY() + 20);
-   // gout.drawCrewDragonRight(pt, pDemo->angleShip); // notice only two parameters are set
-   // pt.setPixelsX(pDemo->ptHubble.getPixelsX() + 20);
-   // pt.setPixelsY(pDemo->ptHubble.getPixelsY() + 20);
-   // gout.drawHubbleLeft(pt, pDemo->angleShip);      // notice only two parameters are set
-   // pt.setPixelsX(pDemo->ptGPS.getPixelsX() + 20);
-   // pt.setPixelsY(pDemo->ptGPS.getPixelsY() + 20);
-   // gout.drawGPSCenter(pt, pDemo->angleShip);       // notice only two parameters are set
-   // pt.setPixelsX(pDemo->ptStarlink.getPixelsX() + 20);
-   // pt.setPixelsY(pDemo->ptStarlink.getPixelsY() + 20);
-   // gout.drawStarlinkArray(pt, pDemo->angleShip);   // notice only two parameters are set
-
-   // draw fragments
-   // pt.setPixelsX(pDemo->ptSputnik.getPixelsX() + 20);
-   // pt.setPixelsY(pDemo->ptSputnik.getPixelsY() + 20);
-   // gout.drawFragment(pt, pDemo->angleShip);
-   // pt.setPixelsX(pDemo->ptShip.getPixelsX() + 20);
-   // pt.setPixelsY(pDemo->ptShip.getPixelsY() + 20);
-   // gout.drawFragment(pt, pDemo->angleShip);
-
 
    // draw the earth
    pDemo->ptEarth.draw(gout);
