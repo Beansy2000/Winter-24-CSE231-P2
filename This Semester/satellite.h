@@ -17,7 +17,6 @@
 #include "uiDraw.h"
 #include "uiInteract.h"
 
-
 enum SatelliteType {
 	sGPS, HUBBLE, STARLINK, SPUTNIK, CREWDRAGON, PART, FRAGMENT
 };
@@ -64,8 +63,8 @@ public:
 
 	// METHODS
 	virtual void draw(ogstream& gout) {}
+	virtual void destroy() {}
 	virtual void destroy(Satellite& satellite) {}
 	virtual void destroy(Projectile& projectile) {}
-	virtual void destroy() {}
 	virtual void move(float time);
 };
