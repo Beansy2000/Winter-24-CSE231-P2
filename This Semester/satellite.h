@@ -16,6 +16,8 @@
 #include "acceleration.h"
 #include "uiDraw.h"
 #include "uiInteract.h"
+#include <list>
+
 
 enum SatelliteType {
 	sGPS, HUBBLE, STARLINK, SPUTNIK, CREWDRAGON, PART, FRAGMENT
@@ -32,17 +34,21 @@ protected:
 	double angularVelocity = 0;
 	bool dead = true;
 	double radius = 0;
+	int fragmentNum = 0;
+	int partNum = 0;
 
 public:
 	// Default constructor
 	Satellite(double radius = 0.0, double angularVelocity = 0.0) : angularVelocity(angularVelocity), dead(true), radius(radius) {}
 
 	// VARIABLES
+	
 	// Get protected variables
 	Velocity getVelocity() const { return velocity; }
 	Position getPosition() const { return position; }
 	Physics getPhysics() const { return physics; }
 	double getAngle() const { return angle.getRadians(); }
+	double getDegrees() const {return angle.getDegrees(); }
 	double getAngularVelocity() const { return angularVelocity; }
 	bool isDead() const { return dead; }
 	float getRadius() const { return radius; }
@@ -52,6 +58,8 @@ public:
 	double getMetersY() { return position.getMetersY(); }
 	double getDX() { return velocity.getDX(); }
 	double getDY() { return velocity.getDY(); }
+	int getNumParts() const { return partNum; }
+	int getNumFrags() const { return fragmentNum; }
 
 	// Setters
 	void setMetersX(double metersX) { position.setMetersX(metersX); }
@@ -64,8 +72,12 @@ public:
 
 	// METHODS
 	virtual void draw(ogstream& gout) {}
+<<<<<<< Updated upstream
 	virtual void destroy();
 	virtual void destroy(Satellite* satellite);
 	virtual void destroy(Projectile* projectile);
+=======
+	virtual void destroy(std::list<Satellite*>& satellites, Satellite* satellite) {}
+>>>>>>> Stashed changes
 	virtual void move(float time);
 };

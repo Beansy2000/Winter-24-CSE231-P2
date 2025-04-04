@@ -57,3 +57,19 @@ bool Collision::IsColliding(Satellite& satellite, Earth& earth) {
 		return false;
 	}
 }
+
+/*************************************
+ * COLLISION : CHECKFORCOLLISION PROJECTILE TO EARTH
+ *************************************/
+bool Collision::IsColliding(Projectile& projectile, Earth& earth) {
+	float distX = earth.getPosition().getMetersX() - projectile.getPosition().getMetersX();
+	float distY = earth.getPosition().getMetersY() - projectile.getPosition().getMetersY();
+
+	float distance = sqrt((distX * distX) + (distY * distY));
+	if (distance <= earth.getRadius() + projectile.getRadius()) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}

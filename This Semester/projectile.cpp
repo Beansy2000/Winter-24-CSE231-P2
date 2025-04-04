@@ -14,17 +14,6 @@
   * PROJECTILE : MOVE
   *************************************/
 void Projectile::move(float time) {
-	// Gravitational Acceleration
-	//double acceleration = physics.getAccelFromGravity(position.getMetersX(), position.getMetersY());
-
-	//// Direction of Gravity in Radians
-	//double gravDirection = physics.getGravDirectionRadians(position.getMetersX(), position.getMetersY());
-
-	//// Change velocity with Gravity
-	//pDemo->ptShip.addPixelsY(cos(pDemo->ptShip.getAngle()));
-	//pDemo->ptShip.addPixelsX(sin(pDemo->ptShip.getAngle()));
-	//double ddx = physics.getDDX(acceleration, gravDirection);
-	//double ddy = physics.getDDY(acceleration, gravDirection);
 	double ddx = sin(angle.getRadians());
 	double ddy = cos(angle.getRadians());
 

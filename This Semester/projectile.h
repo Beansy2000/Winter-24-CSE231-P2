@@ -21,7 +21,8 @@ class Projectile {
 	Position position;
 	Physics physics;
 	Angle angle;
-	double radius = 1;
+	double radius = 1 * position.getZoom();
+	int expirationTimer = (10 * 60);
 public:
 	Projectile(Satellite& ptShip) {
 		velocity = ptShip.getVelocity();
@@ -36,10 +37,11 @@ public:
 	}
 
 	bool isDead = true;
-	int expirationTimer = (10 * 60);
+	bool isExpired() const { return expirationTimer <= 0; }
 
 	float getRadius() const { return radius; }
 	Position getPosition() const { return position; }
+	double getDegrees() const { return angle.getDegrees(); }
 
 	void draw(ogstream& pgout) {
 		pgout.drawProjectile(position);

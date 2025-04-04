@@ -18,6 +18,8 @@
 class Sputnik : public Satellite {
 public:
 	Sputnik() : Satellite() {
+		fragmentNum = 4;
+		partNum = 0;
 		position.setMeters(-36515095.13, 21082000.0);
 		velocity.setDX(2050.0);
 		velocity.setDY(2684.68);
@@ -29,8 +31,5 @@ public:
 		if (!isDead()) {
 			pgout.drawSputnik(position, angle.getRadians());
 		}
-	}
-	void destroy(Satellite& satellite) {
-
 	}
 };

@@ -10,6 +10,7 @@
 #include "satellite.h"
 #include "uiDraw.h"
 #include "uiInteract.h"
+#include <random>
 
 
  /***************************************************
@@ -17,20 +18,25 @@
   ***************************************************/
 class Starlink : public Satellite {
 public:
-	Starlink() : Satellite() {
-		position.setMeters(0.0, -13020000.0);
-		velocity.setDX(5800);
-		velocity.setDY(0);
-		radius = 6 * position.getZoom();
-		angularVelocity = -0.008;
-		dead = false;
-	}
-	void draw(ogstream& pgout) {
-		if (!isDead()) {
-			pgout.drawStarlink(position, angle.getRadians());
-		}
-	}
-	void destroy(Satellite& satellite) {
+	Starlink();
+	void draw(ogstream& pgout) { pgout.drawStarlink(position, angle.getRadians()); }
+	void destroy(std::list<Satellite*>& satellites, Satellite* satellite);
+};
 
-	}
+/***************************************************
+ * STARLINKBODY : SATELLITE
+ ***************************************************/
+class StarlinkBody : public Satellite {
+public:
+	StarlinkBody(Satellite* satellite);
+	void draw(ogstream& pgout) { pgout.drawStarlinkBody(position, angle.getRadians()); }
+};
+
+/***************************************************
+ * STARLINKARRAY : SATELLITE
+ ***************************************************/
+class StarlinkArray : public Satellite {
+public:
+	StarlinkArray(Satellite* satellite);
+	void draw(ogstream& pgout) { pgout.drawStarlinkArray(position, angle.getRadians()); }
 };

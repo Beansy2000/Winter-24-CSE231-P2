@@ -42,9 +42,6 @@ public:
 			pgout.drawShip(position, angle.getRadians(), drawThrust);
 		}
 	}
-	void destroy(Satellite& satellite) {
-
-	}
 	void move(float time) override {}
 	//void input(const Interface* pUI);
 };

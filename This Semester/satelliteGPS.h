@@ -56,11 +56,15 @@ public:
 			angle.setDegrees((double)5 * 60 + 90);
 			break;
 		}
+		fragmentNum = 2;
+		partNum = 3;
 		radius = 12.0 * position.getZoom();
 		angularVelocity = -0.0069813;
 		dead = false;
 	}
 	GPS() : Satellite() {
+		fragmentNum = 2;
+		partNum = 3;
 		position.setMeters(1, 1);
 		velocity.setDX(0);
 		velocity.setDY(0);
@@ -72,8 +76,5 @@ public:
 		if (!isDead()) {
 			pgout.drawGPS(this->position, angle.getRadians());
 		}
-	}
-	void destroy(Satellite& satellite) {
-
 	}
 };

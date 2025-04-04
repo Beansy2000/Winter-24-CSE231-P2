@@ -18,6 +18,8 @@
 class CrewDragon : public Satellite {
 public:
 	CrewDragon() : Satellite() {
+		fragmentNum = 2;
+		partNum = 3;
 		position.setMeters(0.0, 8000000);
 		velocity.setDX(-7900.0);
 		velocity.setDY(0.0);
@@ -25,12 +27,10 @@ public:
 		angularVelocity = -0.01;
 		dead = false;
 	}
+
 	void draw(ogstream& pgout) {
 		if (!isDead()) {
 			pgout.drawCrewDragon(this->position, angle.getRadians());
 		}
-	}
-	void destroy(Satellite& satellite) {
-
 	}
 };

@@ -18,6 +18,8 @@
 class Hubble : public Satellite {
 public:
 	Hubble() : Satellite() {
+		fragmentNum = 0;
+		partNum = 4;
 		position.setMeters(0.0, -42164000.0);
 		velocity.setDX(3100);
 		velocity.setDY(0.0);
@@ -26,6 +28,8 @@ public:
 		dead = false;
 	}
 	Hubble(double dx, double dy) : Satellite() {
+		int fragmentNum = 0;
+		int partNum = 4;
 		position.setMeters(dx, -dy);
 		velocity.setDX(3100);
 		velocity.setDY(0.0);
@@ -37,8 +41,5 @@ public:
 		if (!isDead()) {
 			pgout.drawHubble(position, angle.getRadians());
 		}
-	}
-	void destroy(Satellite& satellite) {
-
 	}
 };
