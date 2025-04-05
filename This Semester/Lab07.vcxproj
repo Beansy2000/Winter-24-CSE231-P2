@@ -149,6 +149,8 @@
     <ClCompile Include="satellite.cpp" />
     <ClCompile Include="satelliteFragment.cpp" />
     <ClCompile Include="satelliteGPS.h" />
+    <ClCompile Include="satelliteHubble.cpp" />
+    <ClCompile Include="satelliteSputnik.cpp" />
     <ClCompile Include="satelliteStarlink.cpp" />
     <ClCompile Include="test.cpp" />
     <ClCompile Include="testAcceleration.cpp" />
