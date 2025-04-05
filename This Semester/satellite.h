@@ -72,12 +72,8 @@ public:
 
 	// METHODS
 	virtual void draw(ogstream& gout) {}
-<<<<<<< Updated upstream
-	virtual void destroy();
-	virtual void destroy(Satellite* satellite);
-	virtual void destroy(Projectile* projectile);
-=======
+
 	virtual void destroy(std::list<Satellite*>& satellites, Satellite* satellite) {}
->>>>>>> Stashed changes
+
 	virtual void move(float time);
 };

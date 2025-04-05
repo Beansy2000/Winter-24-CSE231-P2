@@ -109,10 +109,10 @@ void callBack(const Interface* pUI, void* p)
                if (pDemo->ptCollision.IsColliding(*satellite, *satelliteB)) {
                    pDemo->Satellites.remove(satellite);
                    pDemo->Satellites.remove(satelliteB);
-<<<<<<< Updated upstream
-                   satellite->destroy(satelliteB);
-                   satelliteB->destroy(satellite);
-=======
+//<<<<<<< Updated upstream
+//                   satellite->destroy(satelliteB);
+//                   satelliteB->destroy(satellite);
+//=======
                    //
                    // FRAGMENT CREATION
                    // THIS NEEDS TO BE REPLACED WITH THE PROPER PART CREATION CODE
@@ -131,7 +131,7 @@ void callBack(const Interface* pUI, void* p)
                    if (satelliteB->getNumParts() > 0) {
                        satelliteB->destroy(pDemo->Satellites, satelliteB);
                    }
->>>>>>> Stashed changes
+//>>>>>>> Stashed changes
                    satellite = nullptr;
                    satelliteB = nullptr;
                    goto sattosatcollision;
@@ -175,16 +175,16 @@ void callBack(const Interface* pUI, void* p)
        for (auto satellite : pDemo->Satellites) {
            if (pDemo->ptCollision.IsColliding(*satellite, *projectile) and satellite != &pDemo->ptShip) {
                pDemo->Satellites.remove(satellite);
-<<<<<<< Updated upstream
-               satellite->destroy(projectile);
-=======
+//<<<<<<< Updated upstream
+//               satellite->destroy(projectile);
+//=======
                for (int i = 0; i <= satellite->getNumFrags(); i++) {
                    pDemo->fragments.push_back(new Fragment(satellite, projectile));
                }
                if (satellite->getNumParts() > 0) {
                    satellite->destroy(pDemo->Satellites, satellite);
                }
->>>>>>> Stashed changes
+//>>>>>>> Stashed changes
                pDemo->projectiles.remove(projectile);
                satellite = nullptr;
                projectile = nullptr;
@@ -222,8 +222,8 @@ void callBack(const Interface* pUI, void* p)
    for (auto satellite : pDemo->Satellites) {
        satellite->draw(gout);
    }
-<<<<<<< Updated upstream
-=======
+//<<<<<<< Updated upstream
+//=======
    for (auto fragment : pDemo->fragments) {
        fragment->draw(gout);
    }
@@ -251,7 +251,7 @@ void callBack(const Interface* pUI, void* p)
    // pt.setPixelsY(pDemo->ptShip.getPixelsY() + 20);
    // gout.drawFragment(pt, pDemo->angleShip);
 
->>>>>>> Stashed changes
+//>>>>>>> Stashed changes
 
    // draw the earth
    pDemo->ptEarth.draw(gout);

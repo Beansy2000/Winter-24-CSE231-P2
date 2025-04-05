@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\AAa-in\\This Semester\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F1E52473-1D09-448D-BDBA-28DFE55DB99E}|Lab07.vcxproj|C:\\AAa-in\\This Semester\\satellite.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F1E52473-1D09-448D-BDBA-28DFE55DB99E}|Lab07.vcxproj|solutionrelative:satellite.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1E52473-1D09-448D-BDBA-28DFE55DB99E}|Lab07.vcxproj|C:\\AAa-in\\This Semester\\Lab07.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F1E52473-1D09-448D-BDBA-28DFE55DB99E}|Lab07.vcxproj|solutionrelative:Lab07.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F1E52473-1D09-448D-BDBA-28DFE55DB99E}|Lab07.vcxproj|C:\\AAa-in\\This Semester\\satelliteHubble.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{F1E52473-1D09-448D-BDBA-28DFE55DB99E}|Lab07.vcxproj|solutionrelative:satelliteHubble.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -39,16 +47,8 @@
       "RelativeMoniker": "D:0:0:{F1E52473-1D09-448D-BDBA-28DFE55DB99E}|Lab07.vcxproj|solutionrelative:satelliteStarlink.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F1E52473-1D09-448D-BDBA-28DFE55DB99E}|Lab07.vcxproj|C:\\AAa-in\\This Semester\\Lab07.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F1E52473-1D09-448D-BDBA-28DFE55DB99E}|Lab07.vcxproj|solutionrelative:Lab07.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F1E52473-1D09-448D-BDBA-28DFE55DB99E}|Lab07.vcxproj|C:\\AAa-in\\This Semester\\satellite.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{F1E52473-1D09-448D-BDBA-28DFE55DB99E}|Lab07.vcxproj|solutionrelative:satellite.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F1E52473-1D09-448D-BDBA-28DFE55DB99E}|Lab07.vcxproj|C:\\AAa-in\\This Semester\\satellite.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F1E52473-1D09-448D-BDBA-28DFE55DB99E}|Lab07.vcxproj|solutionrelative:satellite.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F1E52473-1D09-448D-BDBA-28DFE55DB99E}|Lab07.vcxproj|C:\\AAa-in\\This Semester\\projectile.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -110,15 +110,15 @@
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
-      "VerticalTabListWidth": 177,
+      "VerticalTabListWidth": 337,
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 15,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "satelliteHubble.cpp",
               "DocumentMoniker": "C:\\AAa-in\\This Semester\\satelliteHubble.cpp",
               "RelativeDocumentMoniker": "satelliteHubble.cpp",
@@ -132,7 +132,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "satelliteHubble.h",
               "DocumentMoniker": "C:\\AAa-in\\This Semester\\satelliteHubble.h",
               "RelativeDocumentMoniker": "satelliteHubble.h",
@@ -141,12 +141,11 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-04-05T14:43:26.624Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "satelliteSputnik.h",
               "DocumentMoniker": "C:\\AAa-in\\This Semester\\satelliteSputnik.h",
               "RelativeDocumentMoniker": "satelliteSputnik.h",
@@ -155,12 +154,11 @@
               "ViewState": "AgIAAAwAAAAAAAAAAAAAABgAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-04-05T14:43:26.6Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "satelliteSputnik.cpp",
               "DocumentMoniker": "C:\\AAa-in\\This Semester\\satelliteSputnik.cpp",
               "RelativeDocumentMoniker": "satelliteSputnik.cpp",
@@ -169,12 +167,11 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-05T17:18:26.625Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "testCollision.h",
               "DocumentMoniker": "C:\\AAa-in\\This Semester\\testCollision.h",
               "RelativeDocumentMoniker": "testCollision.h",
@@ -182,12 +179,11 @@
               "RelativeToolTip": "testCollision.h",
               "ViewState": "AgIAAFUAAAAAAAAAAAAiwHEAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-05T17:28:43.45Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-05T17:28:43.45Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "satelliteFragment.cpp",
               "DocumentMoniker": "C:\\AAa-in\\This Semester\\satelliteFragment.cpp",
               "RelativeDocumentMoniker": "satelliteFragment.cpp",
@@ -195,12 +191,11 @@
               "RelativeToolTip": "satelliteFragment.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-05T16:14:27.304Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-05T16:14:27.304Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "satelliteStarlink.cpp",
               "DocumentMoniker": "C:\\AAa-in\\This Semester\\satelliteStarlink.cpp",
               "RelativeDocumentMoniker": "satelliteStarlink.cpp",
@@ -208,12 +203,11 @@
               "RelativeToolTip": "satelliteStarlink.cpp",
               "ViewState": "AgIAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-05T16:13:29.042Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-05T16:13:29.042Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "satelliteStarlink.h",
               "DocumentMoniker": "C:\\AAa-in\\This Semester\\satelliteStarlink.h",
               "RelativeDocumentMoniker": "satelliteStarlink.h",
@@ -221,21 +215,24 @@
               "RelativeToolTip": "satelliteStarlink.h",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-05T16:12:59.463Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-05T16:12:59.463Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 1,
               "Title": "Lab07.cpp",
               "DocumentMoniker": "C:\\AAa-in\\This Semester\\Lab07.cpp",
               "RelativeDocumentMoniker": "Lab07.cpp",
               "ToolTip": "C:\\AAa-in\\This Semester\\Lab07.cpp",
               "RelativeToolTip": "Lab07.cpp",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAswHgAAABVAAAAAAAAAA==",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAiwG8AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-05T14:43:26.635Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
               "$type": "Document",
@@ -275,7 +272,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "satelliteGPS.h",
               "DocumentMoniker": "C:\\AAa-in\\This Semester\\satelliteGPS.h",
               "RelativeDocumentMoniker": "satelliteGPS.h",
@@ -283,8 +280,7 @@
               "RelativeToolTip": "satelliteGPS.h",
               "ViewState": "AgIAADAAAAAAAAAAAAAAADQAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-05T14:43:26.621Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-05T14:43:26.621Z"
             },
             {
               "$type": "Document",
@@ -300,15 +296,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 0,
               "Title": "satellite.h",
               "DocumentMoniker": "C:\\AAa-in\\This Semester\\satellite.h",
               "RelativeDocumentMoniker": "satellite.h",
               "ToolTip": "C:\\AAa-in\\This Semester\\satellite.h",
               "RelativeToolTip": "satellite.h",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAiwEIAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAADkAAAAAAAAAAAAiwEoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-05T14:43:26.625Z"
+              "WhenOpened": "2025-04-05T14:43:26.625Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -360,7 +357,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "satellite.cpp",
               "DocumentMoniker": "C:\\AAa-in\\This Semester\\satellite.cpp",
               "RelativeDocumentMoniker": "satellite.cpp",
