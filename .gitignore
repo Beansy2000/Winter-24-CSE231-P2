@@ -11,3 +11,21 @@ Lab03.vcxproj.user
 obj/
 chess
 makefile
+
+
+# Ignore Visual Studio files
+.vs/
+.vs2019/
+.vs2017/
+.vs2015/
+*.vsdx
+
+# Ignore temporary build files
+[Dd]ebug/
+[Dd]ebugPublic/
+[Dd]ist/
+[Dd]istros/
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
