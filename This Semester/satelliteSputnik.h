@@ -41,6 +41,6 @@
 class Sputnik : public Satellite {
 public:
 	Sputnik();
-	void draw(ogstream& pgout) { pgout.drawStarlink(position, angle.getRadians()); }
+	void draw(ogstream& pgout) { pgout.drawSputnik(position, angle.getRadians()); }
 	void destroy(std::list<Satellite*>& satellites, Satellite* satellite);
 };

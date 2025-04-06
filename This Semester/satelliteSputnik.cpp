@@ -29,5 +29,5 @@ Sputnik:: Sputnik() {
  * SPUTNIK : DESTROY
  *************************************/
 void Sputnik::destroy(std::list<Satellite*>& satellites, Satellite* satellite) {
-
+	throw std::runtime_error("Sputnik makes no parts");
 }
