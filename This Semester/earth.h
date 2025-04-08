@@ -23,21 +23,11 @@ private:
 	double angularVelocity;
 	double radius;
 public:
-	Earth() {
-		position.setMeters(0.0, 0.0);
-		velocity.setDXY(0.0, 0.0);
-		radius = 53 * position.getZoom();
-		angularVelocity = -(2 * M_PI / 30) * (24 * 60 / 86400);
-		angle.setRadians(0.0040469023027);
-	}
+	Earth();
 
 	float getRadius() const { return radius; }
 	Position getPosition() const { return position; }
 
-	void draw(ogstream& pgout) {
-		pgout.drawEarth(position, angle.getRadians());
-	}
-	void rotate(double td) {
-		angle.setRadians(angle.getRadians() + -(2 * M_PI / 30) * (td / 86400));
-	}
+	void draw(ogstream& pgout) { pgout.drawEarth(position, angle.getRadians()); }
+	void rotate(double td) { angle.setRadians(angle.getRadians() + -(2 * M_PI / 30) * (td / 86400)); }
 };

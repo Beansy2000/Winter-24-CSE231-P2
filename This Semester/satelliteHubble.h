@@ -13,42 +13,6 @@
 #include "random"
 
  /***************************************************
-  * HUBBLE : SATELLITE
-  ***************************************************/
-//class Hubble : public Satellite {
-//public:
-//	Hubble() : Satellite() {
-//		fragmentNum = 0;
-//		partNum = 4;
-//		position.setMeters(0.0, -42164000.0);
-//		velocity.setDX(3100);
-//		velocity.setDY(0.0);
-//		radius = 10.0 * position.getZoom();
-//		angularVelocity = 0;
-//		dead = false;
-//	}
-//	Hubble(double dx, double dy) : Satellite() {
-//		int fragmentNum = 0;
-//		int partNum = 4;
-//		position.setMeters(dx, -dy);
-//		velocity.setDX(3100);
-//		velocity.setDY(0.0);
-//		radius = 10.0 * position.getZoom();
-//		angularVelocity = 0;
-//		dead = false;
-//	}
-//	void draw(ogstream& pgout) {
-//		if (!isDead()) {
-//			pgout.drawHubble(position, angle.getRadians());
-//		}
-//	}
-//};
-
-
-
-
-
- /***************************************************
   * Hubble : SATELLITE
   ***************************************************/
 class Hubble : public Satellite {

@@ -17,7 +17,7 @@
 #include "uiDraw.h"
 #include "uiInteract.h"
 #include <list>
-
+#include <random>
 
 enum SatelliteType {
 	sGPS, HUBBLE, STARLINK, SPUTNIK, CREWDRAGON, PART, FRAGMENT

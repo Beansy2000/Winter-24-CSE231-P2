@@ -17,20 +17,34 @@
   ***************************************************/
 class CrewDragon : public Satellite {
 public:
-	CrewDragon() : Satellite() {
-		fragmentNum = 2;
-		partNum = 3;
-		position.setMeters(0.0, 8000000);
-		velocity.setDX(-7900.0);
-		velocity.setDY(0.0);
-		radius = 7 * position.getZoom();
-		angularVelocity = -0.01;
-		dead = false;
-	}
+	CrewDragon();
+	void draw(ogstream& pgout) { pgout.drawCrewDragon(this->position, angle.getRadians()); }
+	void destroy(std::list<Satellite*>& satellites, Satellite* satellite);
+};
 
-	void draw(ogstream& pgout) {
-		if (!isDead()) {
-			pgout.drawCrewDragon(this->position, angle.getRadians());
-		}
-	}
+/***************************************************
+ * CREWDRAGONCENTER : SATELLITE
+ ***************************************************/
+class CrewDragonCenter : public Satellite {
+public:
+	CrewDragonCenter(Satellite* satellite);
+	void draw(ogstream& pgout) { pgout.drawCrewDragonCenter(this->position, angle.getRadians()); }
+};
+
+/***************************************************
+ * CREWDRAGONLEFT : SATELLITE
+ ***************************************************/
+class CrewDragonLeft : public Satellite {
+public:
+	CrewDragonLeft(Satellite* satellite);
+	void draw(ogstream& pgout) { pgout.drawCrewDragonLeft(this->position, angle.getRadians()); }
+};
+
+/***************************************************
+ * CREWDRAGONRIGHT : SATELLITE
+ ***************************************************/
+class CrewDragonRight : public Satellite {
+public:
+	CrewDragonRight(Satellite* satellite);
+	void draw(ogstream& pgout) { pgout.drawCrewDragonRight(this->position, angle.getRadians()); }
 };

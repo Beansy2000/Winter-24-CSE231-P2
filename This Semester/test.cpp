@@ -49,7 +49,7 @@ void testRunner()
    TestCrewDragon().run();
    TestGPS().run();
    TestHubble().run();
-   testShip().run();
+   TestShip().run();
    TestStarlink().run();
    TestCollision().run();
 }

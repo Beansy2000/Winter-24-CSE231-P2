@@ -24,17 +24,8 @@ class Projectile {
 	double radius = 1 * position.getZoom();
 	int expirationTimer = (10 * 60);
 public:
-	Projectile(Satellite& ptShip) {
-		velocity = ptShip.getVelocity();
-		position = ptShip.getPosition();
-		physics = ptShip.getPhysics();
-		angle.setRadians(ptShip.getAngle());
-		position.setPixelsX(position.getPixelsX() + sin(angle.getRadians())*18);
-		position.setPixelsY(position.getPixelsY() + cos(angle.getRadians())*18);
-	}
-	Projectile(double dx, double dy) {
-		position.setMeters(dx, dy);
-	}
+	Projectile(Satellite& ptShip);
+	Projectile(double dx, double dy) { position.setMeters(dx, dy); }
 
 	bool isDead = true;
 	bool isExpired() const { return expirationTimer <= 0; }
@@ -43,9 +34,6 @@ public:
 	Position getPosition() const { return position; }
 	double getDegrees() const { return angle.getDegrees(); }
 
-	void draw(ogstream& pgout) {
-		pgout.drawProjectile(position);
-	}
-	void kill();
+	void draw(ogstream& pgout) { pgout.drawProjectile(position); }
 	void move(float time);
 };

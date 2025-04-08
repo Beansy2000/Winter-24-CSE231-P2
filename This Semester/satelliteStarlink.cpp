@@ -9,13 +9,12 @@
 #pragma once
 
 #include "satelliteStarlink.h"
-#include <list>
 
  /*************************************
   * STARLINK : CONSTRUCTOR
   *************************************/
 Starlink::Starlink() {
-	fragmentNum = 2;
+	fragmentNum = 0;
 	partNum = 2;
 	position.setMeters(0.0, -13020000.0);
 	velocity.setDX(5800);
@@ -41,14 +40,15 @@ StarlinkBody::StarlinkBody(Satellite* satellite) {
 	partNum = 0;
 	std::random_device seed;
 	std::mt19937 gen{ seed() };
-	std::uniform_int_distribution<> partOffset{ 1, 8 };
-	position.setPixelsX(satellite->getPosition().getPixelsX() + 4 + partOffset(gen));
-	position.setPixelsY(satellite->getPosition().getPixelsY() + 4 + partOffset(gen));
+	std::uniform_int_distribution<> partOffset{ 2, 8 };
+	position.setPixelsX(satellite->getPosition().getPixelsX() + 2 * partOffset(gen));
+	position.setPixelsY(satellite->getPosition().getPixelsY() + 2 * partOffset(gen));
 	std::uniform_int_distribution<> velocityOffset{ 5, 9 };
 	velocity.setDX(satellite->getDX() + velocityOffset(gen));
 	velocity.setDY(satellite->getDY() + velocityOffset(gen));
 	angle.setRadians(satellite->getAngle());
 	radius = 2 * position.getZoom();
+	angularVelocity = -0.008;
 	dead = false;
 }
 
@@ -60,13 +60,14 @@ StarlinkArray::StarlinkArray(Satellite* satellite) {
 	partNum = 0;
 	std::random_device seed;
 	std::mt19937 gen{ seed() };
-	std::uniform_int_distribution<> fragOffset{ 1, 8 };
-	position.setPixelsX(satellite->getPosition().getPixelsX() + 4 + fragOffset(gen));
-	position.setPixelsY(satellite->getPosition().getPixelsY() + 4 + fragOffset(gen));
+	std::uniform_int_distribution<> partOffset{ 2, 8 };
+	position.setPixelsX(satellite->getPosition().getPixelsX() + 2 * partOffset(gen));
+	position.setPixelsY(satellite->getPosition().getPixelsY() + 2 * partOffset(gen));
 	std::uniform_int_distribution<> velocityOffset{ 5, 9 };
 	velocity.setDX(satellite->getDX() + velocityOffset(gen));
 	velocity.setDY(satellite->getDY() + velocityOffset(gen));
 	angle.setRadians(satellite->getAngle());
 	radius = 2 * position.getZoom();
+	angularVelocity = -0.008;
 	dead = false;
 }

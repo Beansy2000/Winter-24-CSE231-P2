@@ -9,7 +9,6 @@
 #pragma once
 
 #include "satelliteHubble.h"
-#include <list>
 
 /********************
 * Huddle Constructor
@@ -54,9 +53,9 @@ HubbleRight::HubbleRight(Satellite* satellite) {
 	partNum = 3;
 	std::random_device seed;
 	std::mt19937 gen{ seed() };
-	std::uniform_int_distribution<> partOffset{ 1, 8 };
-	position.setPixelsX(satellite->getPosition().getPixelsX() + 4 + partOffset(gen));
-	position.setPixelsY(satellite->getPosition().getPixelsY() + 4 + partOffset(gen));
+	std::uniform_int_distribution<> partOffset{ 2, 8 };
+	position.setPixelsX(satellite->getPosition().getPixelsX() + 2 * partOffset(gen));
+	position.setPixelsY(satellite->getPosition().getPixelsY() + 2 * partOffset(gen));
 	std::uniform_int_distribution<> velocityOffset{ 5, 9 };
 	velocity.setDX(satellite->getDX() + velocityOffset(gen));
 	velocity.setDY(satellite->getDY() + velocityOffset(gen));
@@ -73,9 +72,9 @@ HubbleLeft::HubbleLeft(Satellite* satellite) {
 	partNum = 2;
 	std::random_device seed;
 	std::mt19937 gen{ seed() };
-	std::uniform_int_distribution<> partOffset{ 1, 8 };
-	position.setPixelsX(satellite->getPosition().getPixelsX() + 4 + partOffset(gen));
-	position.setPixelsY(satellite->getPosition().getPixelsY() + 4 + partOffset(gen));
+	std::uniform_int_distribution<> partOffset{ 2, 8 };
+	position.setPixelsX(satellite->getPosition().getPixelsX() + 2 * partOffset(gen));
+	position.setPixelsY(satellite->getPosition().getPixelsY() + 2 * partOffset(gen));
 	std::uniform_int_distribution<> velocityOffset{ 5, 9 };
 	velocity.setDX(satellite->getDX() + velocityOffset(gen));
 	velocity.setDY(satellite->getDY() + velocityOffset(gen));
@@ -91,9 +90,9 @@ HubbleComputer::HubbleComputer(Satellite* satellite) {
 	partNum = 1;
 	std::random_device seed;
 	std::mt19937 gen{ seed() };
-	std::uniform_int_distribution<> partOffset{ 1, 8 };
-	position.setPixelsX(satellite->getPosition().getPixelsX() + 4 + partOffset(gen));
-	position.setPixelsY(satellite->getPosition().getPixelsY() + 4 + partOffset(gen));
+	std::uniform_int_distribution<> partOffset{ 2, 8 };
+	position.setPixelsX(satellite->getPosition().getPixelsX() + 2 * partOffset(gen));
+	position.setPixelsY(satellite->getPosition().getPixelsY() + 2 * partOffset(gen));
 	std::uniform_int_distribution<> velocityOffset{ 5, 9 };
 	velocity.setDX(satellite->getDX() + velocityOffset(gen));
 	velocity.setDY(satellite->getDY() + velocityOffset(gen));
@@ -107,9 +106,9 @@ HubbleTelescope::HubbleTelescope(Satellite* satellite) {
 	partNum = 4;
 	std::random_device seed;
 	std::mt19937 gen{ seed() };
-	std::uniform_int_distribution<> partOffset{ 1, 8 };
-	position.setPixelsX(satellite->getPosition().getPixelsX() + 4 + partOffset(gen));
-	position.setPixelsY(satellite->getPosition().getPixelsY() + 4 + partOffset(gen));
+	std::uniform_int_distribution<> partOffset{ 2, 8 };
+	position.setPixelsX(satellite->getPosition().getPixelsX() + 2 * partOffset(gen));
+	position.setPixelsY(satellite->getPosition().getPixelsY() + 2 * partOffset(gen));
 	std::uniform_int_distribution<> velocityOffset{ 5, 9 };
 	velocity.setDX(satellite->getDX() + velocityOffset(gen));
 	velocity.setDY(satellite->getDY() + velocityOffset(gen));

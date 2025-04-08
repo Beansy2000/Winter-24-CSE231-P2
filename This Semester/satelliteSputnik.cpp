@@ -9,7 +9,6 @@
 #pragma once
 
 #include "satelliteSputnik.h"
-#include <list>
 
  /*************************************
   * SPUTNIK : CONSTRUCTOR

@@ -81,14 +81,10 @@ void callBack(const Interface* pUI, void* p)
    if (std::find(pDemo->Satellites.begin(), pDemo->Satellites.end(), &pDemo->ptShip) != pDemo->Satellites.end()) {
        if (pUI->isUp()) {
            pDemo->ptShip.drive();
-           pDemo->ptShip.drive();
        }
        else {
            pDemo->ptShip.drawThrust = false;
        }
-       //if (pUI->isDown())
-       //    pDemo->ptShip.addPixelsY(-cos(pDemo->ptShip.getAngle()));
-       //    pDemo->ptShip.addPixelsX(-sin(pDemo->ptShip.getAngle()));
        if (pUI->isLeft())
            pDemo->ptShip.rotateLeft();
        if (pUI->isRight())
@@ -99,46 +95,11 @@ void callBack(const Interface* pUI, void* p)
    }
 
    // move by a little
-   // collision detection and destruction
-   pDemo->ptEarth.rotate(td);
-   sattosatcollision:
+
    for (auto satellite : pDemo->Satellites) {
        satellite->move(tpf);
-       for (auto satelliteB : pDemo->Satellites) {
-           if (satellite != satelliteB) {
-               if (pDemo->ptCollision.IsColliding(*satellite, *satelliteB)) {
-                   pDemo->Satellites.remove(satellite);
-                   pDemo->Satellites.remove(satelliteB);
-//<<<<<<< Updated upstream
-//                   satellite->destroy(satelliteB);
-//                   satelliteB->destroy(satellite);
-//=======
-                   //
-                   // FRAGMENT CREATION
-                   // THIS NEEDS TO BE REPLACED WITH THE PROPER PART CREATION CODE
-                   //
-                   //pDemo->fragments.push_back(new Fragment(satellite, satelliteB));
-                   //pDemo->fragments.push_back(new Fragment(satelliteB, satellite));
-                   for (int i = 0; i <= satellite->getNumFrags(); i++) {
-                       pDemo->fragments.push_back(new Fragment(satellite, satelliteB));
-                   }
-                   for (int i = 0; i <= satelliteB->getNumFrags(); i++) {
-                       pDemo->fragments.push_back(new Fragment(satellite, satelliteB));
-                   }
-                   if (satellite->getNumParts() > 0) {
-                       satellite->destroy(pDemo->Satellites, satellite);
-                   }
-                   if (satelliteB->getNumParts() > 0) {
-                       satelliteB->destroy(pDemo->Satellites, satelliteB);
-                   }
-//>>>>>>> Stashed changes
-                   satellite = nullptr;
-                   satelliteB = nullptr;
-                   goto sattosatcollision;
-               }
-           }
-       }
    }
+   pDemo->ptEarth.rotate(td);
 
    fragmentexpiration:
    for (auto fragment : pDemo->fragments) {
@@ -149,17 +110,6 @@ void callBack(const Interface* pUI, void* p)
            goto fragmentexpiration;
        }
    }
-
-   sattoearthcollision:
-   for (auto satellite : pDemo->Satellites) {
-       if (pDemo->ptCollision.IsColliding(*satellite, pDemo->ptEarth)) {
-           pDemo->Satellites.remove(satellite);
-           //satellite->destroy();
-           satellite = nullptr;
-           goto sattoearthcollision;
-       }
-   }
-
    projectileexpiration:
    for (auto projectile : pDemo->projectiles) {
        projectile->move(tpf);
@@ -170,41 +120,12 @@ void callBack(const Interface* pUI, void* p)
        }
    }
 
-   sattoprojectilecollision:
-   for (auto projectile : pDemo->projectiles) {
-       for (auto satellite : pDemo->Satellites) {
-           if (pDemo->ptCollision.IsColliding(*satellite, *projectile) and satellite != &pDemo->ptShip) {
-               pDemo->Satellites.remove(satellite);
-//<<<<<<< Updated upstream
-//               satellite->destroy(projectile);
-//=======
-               for (int i = 0; i <= satellite->getNumFrags(); i++) {
-                   pDemo->fragments.push_back(new Fragment(satellite, projectile));
-               }
-               if (satellite->getNumParts() > 0) {
-                   satellite->destroy(pDemo->Satellites, satellite);
-               }
-//>>>>>>> Stashed changes
-               pDemo->projectiles.remove(projectile);
-               satellite = nullptr;
-               projectile = nullptr;
-               goto sattoprojectilecollision;
-           }
-       }
-   }
+   // collision detection and destruction
 
-   earthtoprojectilecollision:
-   for (auto projectile : pDemo->projectiles) {
-        if (pDemo->ptCollision.IsColliding(*projectile, pDemo->ptEarth)) {
-            pDemo->projectiles.remove(projectile);
-            projectile = nullptr;
-            goto earthtoprojectilecollision;
-        }
-   }
-
-   //
-   // perform all the game logic
-   //
+   pDemo->ptCollision.ProjectiletoEarthCollision(pDemo->projectiles, pDemo->ptEarth);
+   pDemo->ptCollision.SatellitetoEarthCollision(pDemo->Satellites, pDemo->ptEarth);
+   pDemo->ptCollision.SatellitetoProjectileCollision(pDemo->Satellites, pDemo->projectiles, pDemo->fragments, pDemo->ptShip);
+   pDemo->ptCollision.SatellitetoSatelliteCollision(pDemo->Satellites, pDemo->fragments);
 
    //
    // draw everything
@@ -222,36 +143,10 @@ void callBack(const Interface* pUI, void* p)
    for (auto satellite : pDemo->Satellites) {
        satellite->draw(gout);
    }
-//<<<<<<< Updated upstream
-//=======
+
    for (auto fragment : pDemo->fragments) {
        fragment->draw(gout);
    }
-   //pDemo->ptShip.draw(gout);
-
-   // draw parts
-   // pt.setPixelsX(pDemo->ptCrewDragon.getPixelsX() + 20);
-   // pt.setPixelsY(pDemo->ptCrewDragon.getPixelsY() + 20);
-   // gout.drawCrewDragonRight(pt, pDemo->angleShip); // notice only two parameters are set
-   // pt.setPixelsX(pDemo->ptHubble.getPixelsX() + 20);
-   // pt.setPixelsY(pDemo->ptHubble.getPixelsY() + 20);
-   // gout.drawHubbleLeft(pt, pDemo->angleShip);      // notice only two parameters are set
-   // pt.setPixelsX(pDemo->ptGPS.getPixelsX() + 20);
-   // pt.setPixelsY(pDemo->ptGPS.getPixelsY() + 20);
-   // gout.drawGPSCenter(pt, pDemo->angleShip);       // notice only two parameters are set
-   // pt.setPixelsX(pDemo->ptStarlink.getPixelsX() + 20);
-   // pt.setPixelsY(pDemo->ptStarlink.getPixelsY() + 20);
-   // gout.drawStarlinkArray(pt, pDemo->angleShip);   // notice only two parameters are set
-
-   // draw fragments
-   // pt.setPixelsX(pDemo->ptSputnik.getPixelsX() + 20);
-   // pt.setPixelsY(pDemo->ptSputnik.getPixelsY() + 20);
-   // gout.drawFragment(pt, pDemo->angleShip);
-   // pt.setPixelsX(pDemo->ptShip.getPixelsX() + 20);
-   // pt.setPixelsY(pDemo->ptShip.getPixelsY() + 20);
-   // gout.drawFragment(pt, pDemo->angleShip);
-
-//>>>>>>> Stashed changes
 
    // draw the earth
    pDemo->ptEarth.draw(gout);

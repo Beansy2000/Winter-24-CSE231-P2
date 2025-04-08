@@ -58,3 +58,13 @@ void Position::add(const Acceleration& a, const Velocity& v, double t)
    x = x + (v.getDX() * t) + 0.5 * a.getDDX() * (t * t);
    y = y + (v.getDY() * t) + 0.5 * a.getDDY() * (t * t);
 }
+
+/*********************************************
+ * COMPUTE DISTANCE
+ * Find the distance between two positions
+ *********************************************/
+inline double computeDistance(const Position& pos1, const Position& pos2)
+{
+    return sqrt((pos1.getMetersX() - pos2.getMetersX()) * (pos1.getMetersX() - pos2.getMetersX()) +
+        (pos1.getMetersY() - pos2.getMetersY()) * (pos1.getMetersY() - pos2.getMetersY()));
+}

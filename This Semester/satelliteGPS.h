@@ -17,64 +17,36 @@
   ***************************************************/
 class GPS : public Satellite {
 public:
-	GPS(int i) : Satellite() {
-		switch (i) {
-		case 1:
-			position.setMeters(0.0, 26560000.0);
-			velocity.setDX(-3880.0);
-			velocity.setDY(0.0);
-			angle.setDegrees((double)0 * 60 + 90);
-			break;
-		case 2:
-			position.setMeters(23001634.72, 13280000.0);
-			velocity.setDX(-1940.0);
-			velocity.setDY(3360.18);
-			angle.setDegrees((double)1 * 60 + 90);
-			break;
-		case 3:
-			position.setMeters(23001634.72, -13280000.0);
-			velocity.setDX(1940.0);
-			velocity.setDY(3360.18);
-			angle.setDegrees((double)2 * 60 + 90);
-			break;
-		case 4:
-			position.setMeters(0.0, -26560000.0);
-			velocity.setDX(3880.0);
-			velocity.setDY(0.0);
-			angle.setDegrees((double)3 * 60 + 90);
-			break;
-		case 5:
-			position.setMeters(-23001634.72, -13280000.0);
-			velocity.setDX(1940.0);
-			velocity.setDY(-3360.18);
-			angle.setDegrees((double)4 * 60 + 90);
-			break;
-		case 6:
-			position.setMeters(-23001634.72, 13280000.0);
-			velocity.setDX(-1940.0);
-			velocity.setDY(-3360.18);
-			angle.setDegrees((double)5 * 60 + 90);
-			break;
-		}
-		fragmentNum = 2;
-		partNum = 3;
-		radius = 12.0 * position.getZoom();
-		angularVelocity = -0.0069813;
-		dead = false;
-	}
-	GPS() : Satellite() {
-		fragmentNum = 2;
-		partNum = 3;
-		position.setMeters(1, 1);
-		velocity.setDX(0);
-		velocity.setDY(0);
-		radius = 12.0 * this->position.getZoom();
-		angularVelocity = -0.0069813;
-		dead = false;
-	}
-	void draw(ogstream& pgout) {
-		if (!isDead()) {
-			pgout.drawGPS(this->position, angle.getRadians());
-		}
-	}
+	GPS(int i);
+	GPS();
+	void draw(ogstream& pgout) { pgout.drawGPS(this->position, angle.getRadians()); }
+	void destroy(std::list<Satellite*>& satellites, Satellite* satellite);
 };
+
+/***************************************************
+ * GPSCENTER : SATELLITE
+ ***************************************************/
+class GPSCenter : public Satellite {
+public:
+	GPSCenter(Satellite* satellite);
+	void draw(ogstream& pgout) { pgout.drawGPSCenter(this->position, angle.getRadians()); }
+};
+
+/***************************************************
+ * GPSCENTER : SATELLITE
+ ***************************************************/
+class GPSLeft : public Satellite {
+public:
+	GPSLeft(Satellite* satellite);
+	void draw(ogstream& pgout) { pgout.drawGPSLeft(this->position, angle.getRadians()); }
+};
+
+/***************************************************
+ * GPSCENTER : SATELLITE
+ ***************************************************/
+class GPSRight : public Satellite {
+public:
+	GPSRight(Satellite* satellite);
+	void draw(ogstream& pgout) { pgout.drawGPSRight(this->position, angle.getRadians()); }
+};
+

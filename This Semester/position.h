@@ -7,8 +7,6 @@
  *    Everything we need to know about a location on the screen
  *    or the location on the field.
  ************************************************************************/
-
-
 #pragma once
 
 #include <iostream> 
@@ -55,20 +53,9 @@ public:
    void setZoom(double metersFromPixels) { this->metersFromPixels = metersFromPixels; }
    double getZoom() const { return metersFromPixels; }
 
-   bool operator < (const Position& other) const
-   {
-      return x < other.x || (x == other.x && y < other.y);
-   }
-
-   bool operator == (const Position& rhs) const
-   {
-      return rhs.getMetersX() == x && rhs.getMetersY() == y;
-   }
-
-   bool operator != (const Position& rhs) const
-   {
-      return rhs.getMetersX() != x || rhs.getMetersY() != y;
-   }
+   bool operator < (const Position& other) const { return x < other.x || (x == other.x && y < other.y); }
+   bool operator == (const Position& rhs) const { return rhs.getMetersX() == x && rhs.getMetersY() == y; }
+   bool operator != (const Position& rhs) const { return rhs.getMetersX() != x || rhs.getMetersY() != y; }
 
    void add(const Acceleration& a, const Velocity& v, double t);
 
@@ -78,16 +65,7 @@ private:
    static double metersFromPixels;
 };
 
-/*********************************************
- * COMPUTE DISTANCE
- * Find the distance between two positions
- *********************************************/
-inline double computeDistance(const Position& pos1, const Position& pos2)
-{
-   return sqrt((pos1.getMetersX() - pos2.getMetersX()) * (pos1.getMetersX() - pos2.getMetersX()) +
-               (pos1.getMetersY() - pos2.getMetersY()) * (pos1.getMetersY() - pos2.getMetersY()));
-}
-
+inline double computeDistance(const Position& pos1, const Position& pos2);
 // stream I/O useful for debugging
 std::ostream & operator << (std::ostream & out, const Position& pt);
 std::istream & operator >> (std::istream & in,        Position& pt);
