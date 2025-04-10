@@ -13,7 +13,7 @@
 /********************
 * Huddle Constructor
 ********************/
-Hubble:: Hubble() {
+Hubble::Hubble() {
 	fragmentNum = 0;
 	partNum = 4;
 	position.setMeters(0.0, -42164000.0);
@@ -24,7 +24,7 @@ Hubble:: Hubble() {
 	dead = false;
 }
 
-Hubble:: Hubble(double dx, double dy) {
+Hubble::Hubble(double dx, double dy) {
 		int fragmentNum = 0;
 		int partNum = 4;
 		position.setMeters(dx, -dy);

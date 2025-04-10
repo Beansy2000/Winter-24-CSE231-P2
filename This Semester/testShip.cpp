@@ -53,7 +53,7 @@ void TestShip::turnLeft() {
 	Angle a;
 
 	// Action
-	a.setRadians(s.getAngle() - 0.02);
+	a.setRadians(s.getAngle() - 0.04);
 	s.rotateLeft();
 
 	// TEST
@@ -69,7 +69,7 @@ void TestShip::turnRight() {
 	Angle a;
 
 	// Action
-	a.setRadians(s.getAngle() + 0.02);
+	a.setRadians(s.getAngle() + 0.04);
 	s.rotateRight();
 
 	// TEST
@@ -86,8 +86,8 @@ void TestShip::moveForward() {
 
 	// Action
 	p.setMeters(s.getMetersX(), s.getMetersY());
-	p.addPixelsX(sin(s.getAngle()));
-	p.addPixelsY(cos(s.getAngle()));
+	p.addPixelsX(sin(s.getAngle())*2);
+	p.addPixelsY(cos(s.getAngle())*2);
 	s.drive();
 
 	// TEST
